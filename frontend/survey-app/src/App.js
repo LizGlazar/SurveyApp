@@ -17,11 +17,15 @@ function App() {
       <a id="button-sign-up" href="#">SIGN UP</a>
       <a id="button-about" href="#">ABOUT</a>
       <a id="button-contact" href="#">CONTACT</a>
-      {/*<div id="button-get-started">
-        <div id="button-get-started-rectangle">*/}
-          <button id="button-get-started-text" type="button">GET STARTED</button>
-        {/*</div>
-      </div>*/}
+      <button id="button-get-started-text" type="button" className="btn btn-primary">GET STARTED</button>
+      <svg id="ellipse-1">
+        <circle cx="171" cy="171" r="171" style={{fill:"#E5E5E5", fillOpacity:0.1}} />
+      </svg>
+
+
+background: rgba(229, 229, 229, 0.1);
+}
+
       {/*<Header />
 
         <Homepage />
