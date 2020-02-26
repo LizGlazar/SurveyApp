@@ -1,0 +1,245 @@
+/* landing-page-background */
+
+#landing-page-background   {
+position: absolute;
+width: 1920px;
+height: 1080px;
+left: 0px;
+top: 0px;
+
+
+background: #2F303A;
+}
+
+/* Ellipse 1 */
+#ellipse-1 {
+position: absolute;
+width: 342px;
+height: 342px;
+left: 138px;
+top: 626px;
+}
+
+/* Ellipse 5 */
+#ellipse-5 {
+position: absolute;
+width: 342px;
+height: 342px;
+left: 174px;
+top: 616px;
+
+background: rgba(229, 229, 229, 0.1);
+}
+
+/* Ellipse 2 */
+#ellipse-2 {
+position: absolute;
+width: 240px;
+height: 240px;
+left: 588px;
+top: 146px;
+
+background: rgba(235, 87, 87, 0.1);
+}
+
+/* Ellipse 6 */
+#ellipse-6 {
+position: absolute;
+width: 240px;
+height: 240px;
+left: 608px;
+top: 146px;
+
+background: rgba(235, 87, 87, 0.1);
+}
+
+/* Ellipse 3 */
+#ellipse-3 {
+
+position: absolute;
+width: 497px;
+height: 497px;
+left: 1500px;
+top: 661px;
+
+background: rgba(235, 87, 87, 0.1);
+}
+
+/* Ellipse 4 */
+#ellipse-4 {
+position: absolute;
+width: 497px;
+height: 497px;
+left: 1440px;
+top: 661px;
+
+background: rgba(235, 87, 87, 0.1);
+}
+
+/* Get The Feedback You Need */
+#landing-page-text {
+position: absolute;
+width: 1740px;
+height: 100px;
+left: 90px;
+top: 372px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 24px;
+/* or 33% */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
+
+/* buttonGetStarted */
+#button-get-started {
+position: absolute;
+width: 369.86px;
+height: 77.98px;
+left: 768.39px;
+top: 548.02px;
+}
+
+#button-get-started-rectangle {
+    position: absolute;
+width: 369.86px;
+height: 77.98px;
+left: 768.39px;
+top: 548.02px;
+
+background: #EB5757;
+border-radius: 10px;
+}
+
+#button-get-started-text {
+    background: #EB5757;
+    position: absolute;
+width: 365.73px;
+height: 73.53px;
+left: 768.39px;
+top: 552.47px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+/*line-height: 100px;*/
+/* or 417% */
+
+/*align-items: center;
+text-align: center;*/
+
+color: #FFFFFF;
+
+}
+
+/* SIGN UP */
+#button-sign-up {
+position: absolute;
+width: 93px;
+height: 24px;
+left: 1407px;
+top: 30px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 24px;
+/* identical to box height, or 100% */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
+
+/* Frame 1 */
+
+
+/* Auto Layout */
+#button-about {
+    position: absolute;
+    width: 79px;
+    height: 24px;
+    left: 1552px;
+    top: 30px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    /* identical to box height, or 100% */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+
+/* LOG IN */
+#button-login {
+position: absolute;
+width: 78px;
+height: 24px;
+left: 1271px;
+top: 30px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 24px;
+/* identical to box height, or 100% */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
+#button-contact {
+    position: absolute;
+width: 115px;
+height: 24px;
+left: 1680px;
+top: 30px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 24px;
+/* identical to box height, or 100% */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
+/* SurveyApp */
+
+#landing-page-logo {
+position: absolute;
+width: 162px;
+height: 24px;
+left: 107px;
+top: 40px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 24px;
+/* identical to box height, or 80% */
+
+text-align: center;
+
+color: #FFFFFF;
+}
