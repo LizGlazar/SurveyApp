@@ -12,14 +12,16 @@ import Ellipse from './components/ellipseComponent/ellipse';
 import Nav from './Nav';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from "react-router-dom";
 import LandingPage from './components/pages/LandingPage';
 import LogIn from './components/pages/LogIn';
 import SignUp from './components/pages/SignUp';
+import history from './history';
 
 function App() {
   return (
-    <Router>
+    <Router history={history}>
       <div id="landing-page-background">
         <Nav />
         <Switch>
