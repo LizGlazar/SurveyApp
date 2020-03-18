@@ -13,15 +13,15 @@ class LoginBox extends React.Component {
       return (
 /*        <div className="box-controller">
           <div className="controller selected-controller">*/
-            <div className="box-container">
+              <div className="box-container">
         <div className="inner-container">
-          <div className="header">
+          {/*<div className="header">
             Login
-          </div>
+           </div>*/}
           <div className="box">
   
             <div className="input-group">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username">Email:</label> {/* email is used as username*/}
               <input
                 type="text"
                 name="username"
@@ -30,7 +30,7 @@ class LoginBox extends React.Component {
             </div>
   
             <div className="input-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password:</label>
               <input
                 type="password"
                 name="password"
