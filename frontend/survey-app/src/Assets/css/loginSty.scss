@@ -23,7 +23,8 @@ $flamingo_theme: #EB5757;
     width: 70%;
     height: 70%;
     display: flex;
-    justify-content: flex-end;
+    visibility: visible;
+    /*justify-content: flex-end;
     justify-content: space-around;
     align-items: center;
     //flex-direction: column;
@@ -35,18 +36,41 @@ $flamingo_theme: #EB5757;
     //height: 35px;
     //-webkit-box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
     //box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
-    margin-top: 150px;
+    margin-top: 200px;
     margin-left: 550px;
+    transition: visibility 0.5s ease-out;*/
+} 
+
+.child1LoginPageLoginBox {
+    //display: flex;
+    //justify-content: flex-end;
+    //justify-content: space-around;
+    align-items: center;
+    //flex-direction: column;
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    max-width: 30em;
+    min-width: 21em;
+    height: 80px; //TO DO POPRAWIENIA
+    //-webkit-box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    //box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    margin-top: 200px;
+    margin-left: 950px;
     transition: visibility 0.5s ease-out;
 }
 
-.childLoginPage2 {
-    display: flex;
-    align-items: flex-start;
-    text-align: center;
+.child2LoginPageHeadline {
+    //display: flex;
+    //flex-direction: column;
+    justify-content: flex-start;
+    //justify-content: space-around;
+    align-items: left;
+    margin-left: 90px;
+    margin-bottom: 450px;
     font-family: Poppins;
-    font-weight: bold;
-    font-size: xx-large;
+    font-weight: bolder;
+    font-size: 72px;
     color: white;
 }
 
@@ -82,8 +106,8 @@ $flamingo_theme: #EB5757;
 }
 
 .box-container {
-    display: flex;
-    flex-direction: row;
+    //display: flex;
+    //flex-direction: column;
     max-width: 35em;
     min-width: 24em;
     //background-color: black;
@@ -125,7 +149,7 @@ $flamingo_theme: #EB5757;
     visibility: visible;
 }
 
-//Header
+/*//Header
 .header {
     text-align: center;
     padding: 5px;
@@ -135,12 +159,13 @@ $flamingo_theme: #EB5757;
     font-family: Ozxgen, sans-serif;
     font-size: 22px;
     border-bottom: 2px solid $flamingo_theme;
-}
+}*/
 
 .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    //background-color: #202027; //TO USUNĄĆ
 }
 
 .input-group {

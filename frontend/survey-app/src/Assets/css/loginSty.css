@@ -28,35 +28,55 @@
           box-sizing: border-box;
   width: 70%;
   height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  visibility: visible;
+  /*justify-content: flex-end;
+    justify-content: space-around;
+    align-items: center;
+    //flex-direction: column;
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    //max-width: 30em;
+    //min-width: 21em;
+    //height: 35px;
+    //-webkit-box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    //box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    margin-top: 200px;
+    margin-left: 550px;
+    transition: visibility 0.5s ease-out;*/
+}
+
+.child1LoginPageLoginBox {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   visibility: visible;
   display: -webkit-box;
   display: -ms-flexbox;
-  margin-top: 150px;
-  margin-left: 550px;
+  max-width: 30em;
+  min-width: 21em;
+  height: 80px;
+  margin-top: 200px;
+  margin-left: 950px;
   -webkit-transition: visibility 0.5s ease-out;
   transition: visibility 0.5s ease-out;
 }
 
-.childLoginPage2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  text-align: center;
+.child2LoginPageHeadline {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  margin-left: 90px;
+  margin-bottom: 450px;
   font-family: Poppins;
-  font-weight: bold;
-  font-size: xx-large;
+  font-weight: bolder;
+  font-size: 72px;
   color: white;
 }
 
@@ -95,13 +115,9 @@
 }
 
 .box-container {
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   max-width: 35em;
   min-width: 24em;
+  background-color: black;
   box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
   border-radius: 6px;
   padding: 24px;
@@ -143,17 +159,17 @@
   visibility: visible;
 }
 
+/*//Header
 .header {
-  text-align: center;
-  padding: 5px;
-  margin-bottom: 17px;
-  margin-left: 35px;
-  margin-right: 35px;
-  font-family: Ozxgen, sans-serif;
-  font-size: 22px;
-  border-bottom: 2px solid #EB5757;
-}
-
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 17px;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-family: Ozxgen, sans-serif;
+    font-size: 22px;
+    border-bottom: 2px solid $flamingo_theme;
+}*/
 .box {
   display: -webkit-box;
   display: -ms-flexbox;

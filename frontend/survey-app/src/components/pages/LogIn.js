@@ -11,10 +11,10 @@ function LogIn() {
       <p id="landing-page-logo">SurveyApp</p>
       <Nav />
       <Ellipse />
-      <div className="childLoginPage1"><LoginBox /></div>
+      <div className="child1LoginPageLoginBox"><LoginBox /></div>
       
-      <div className="childLoginPage2">
-        <p>Gather feedback to plan for future</p>
+      <div className="child2LoginPageHeadline">
+        <p>Gather <span Style="color: #EB5757; font-size: 90px">feedback</span><br /> to plan for future</p>
       </div>
 
     
