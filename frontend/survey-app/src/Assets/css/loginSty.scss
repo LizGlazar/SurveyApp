@@ -18,6 +18,38 @@ $flamingo_theme: #EB5757;
     flex-direction: column;
 }
 
+.parent-container {
+    box-sizing: border-box;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around;
+    align-items: center;
+    //flex-direction: column;
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    //max-width: 30em;
+    //min-width: 21em;
+    //height: 35px;
+    //-webkit-box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    //box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    margin-top: 150px;
+    margin-left: 550px;
+    transition: visibility 0.5s ease-out;
+}
+
+.childLoginPage2 {
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: xx-large;
+    color: white;
+}
+
 .box-controller {
     visibility: visible;
     display: -webkit-box;

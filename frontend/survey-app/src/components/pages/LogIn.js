@@ -6,15 +6,19 @@ import LoginBox from '../loginBoxComponent/loginBox';
 
 function LogIn() {
   return (
+    <div className="parent-container">
     <div id="landing-page-background">
       <p id="landing-page-logo">SurveyApp</p>
       <Nav />
       <Ellipse />
-      <LoginBox />
+      <div className="childLoginPage1"><LoginBox /></div>
       
-      <h1>Login Page</h1>
+      <div className="childLoginPage2">
+        <p>Gather feedback to plan for future</p>
+      </div>
 
     
+    </div>
     </div>
   );
 }
