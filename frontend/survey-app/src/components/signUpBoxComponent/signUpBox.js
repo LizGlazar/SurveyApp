@@ -11,34 +11,43 @@ class SignUpBox extends React.Component {
   
     render() {
       return (
+        <div className = "parent-container">
+{/*}       <div className="box-controller">
+          <div className="controller selected-controller">*/}
+              <div className="box-container">
         <div className="inner-container">
-          <div className="header">
-            Sign Up
-          </div>
+          {/*<div className="header">
+            Login
+           </div>*/}
           <div className="box">
-  
+
             <div className="input-group">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username">Name:</label> {/* email is used as username*/}
               <input
                 type="text"
                 name="username"
                 className="login-input"
-                placeholder="Username"/>
+                placeholder="Sam Sung"/>
             </div>
   
             <div className="input-group">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" className="login-input" placeholder="Email"/>
+              <label htmlFor="username">Email:</label> {/* email is used as username*/}
+              <input
+                type="text"
+                name="username"
+                className="login-input"
+                placeholder="example@domain.com"/>
             </div>
   
             <div className="input-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password:</label>
               <input
                 type="password"
                 name="password"
                 className="login-input"
                 placeholder="Password"/>
             </div>
+  
             <button
               type="button"
               className="login-btn"
@@ -47,7 +56,12 @@ class SignUpBox extends React.Component {
               .bind(this)}>Sign Up</button>
           </div>
         </div>
+        </div>
+        {/*</div>
+        </div>*/}
+        </div>
       );
     }
-  }
   
+  };
+  export default SignUpBox;

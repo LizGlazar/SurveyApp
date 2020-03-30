@@ -11,8 +11,9 @@ class LoginBox extends React.Component {
   
     render() {
       return (
-/*        <div className="box-controller">
-          <div className="controller selected-controller">*/
+        <div className = "parent-container">
+{/*}       <div className="box-controller">
+          <div className="controller selected-controller">*/}
               <div className="box-container">
         <div className="inner-container">
           {/*<div className="header">
@@ -26,7 +27,7 @@ class LoginBox extends React.Component {
                 type="text"
                 name="username"
                 className="login-input"
-                placeholder="Username"/>
+                placeholder="example@domain.com"/>
             </div>
   
             <div className="input-group">
@@ -47,8 +48,9 @@ class LoginBox extends React.Component {
           </div>
         </div>
         </div>
-        /*</div>
-        </div>*/
+        {/*</div>
+        </div>*/}
+        </div>
       );
     }
   

@@ -2,16 +2,24 @@ import React from 'react';
 //import './Assets/css/surveyapp.css';
 import Nav from '../../Nav.js';
 import Ellipse from '../ellipseComponent/ellipse';
-function SignUp() {
-  return (
-    <div id="landing-page-background">
-      <p id="landing-page-logo">SurveyApp</p>
-      <Nav />
-      <Ellipse />
-      <h1>SignUp Page</h1>
+import SignUpBox from '../signUpBoxComponent/signUpBox';
 
-    
-    </div>
+function SignUp() {
+    return (
+      <div className="parent-container">
+      <div id="landing-page-background">
+        <p id="landing-page-logo">SurveyApp</p>
+        <Nav />
+        <Ellipse />
+        <div className="child1LoginPageLoginBox"><SignUpBox /></div>
+        
+        <div className="child2LoginPageHeadline">
+          <p>Gather <span Style="color: #EB5757; font-size: 90px">feedback</span><br /> to plan for future</p>
+        </div>
+  
+      
+      </div>
+      </div>
   );
 }
 

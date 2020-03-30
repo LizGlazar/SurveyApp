@@ -6,15 +6,19 @@ import LoginBox from '../loginBoxComponent/loginBox';
 
 function LogIn() {
   return (
+    <div className="parent-container">
     <div id="landing-page-background">
       <p id="landing-page-logo">SurveyApp</p>
       <Nav />
       <Ellipse />
-      <LoginBox />
+      <div className="child1LoginPageLoginBox"><LoginBox /></div>
       
-      <h1>Login Page</h1>
+      <div className="child2LoginPageHeadline">
+        <p>Gather <span Style="color: #EB5757; font-size: 90px">feedback</span><br /> to plan for future</p>
+      </div>
 
     
+    </div>
     </div>
   );
 }

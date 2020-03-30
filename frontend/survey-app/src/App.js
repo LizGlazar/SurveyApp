@@ -8,7 +8,7 @@ import React from 'react';
 //includes
 //import './Assets/css/default.min.css';
 import './Assets/css/surveyapp.css';
-import './Assets/css/loginSty.css';
+import './Assets/css/loginAndSignUpSty.css';
 import Ellipse from './components/ellipseComponent/ellipse';
 import Nav from './Nav';
 import About from './components/pages/About';
