@@ -20,6 +20,7 @@ import LogIn from './components/pages/LogIn';
 import LoginBox from './components/loginBoxComponent/loginBox';
 import SignUp from './components/pages/SignUp';
 import history from './history';
+import CoordinatorsSurveyList from './components/pages/CoordinatorsSurveyList';
 
 function App() {
   
@@ -62,6 +63,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={LogIn} />
         <Route path="/signup" component={SignUp} />
+        <Route path="/coordinators-survey-list" component={CoordinatorsSurveyList} />
         <Ellipse />
         </Switch> 
       </div> 
