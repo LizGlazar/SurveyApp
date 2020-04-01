@@ -21,6 +21,8 @@ import LoginBox from './components/loginBoxComponent/loginBox';
 import SignUp from './components/pages/SignUp';
 import history from './history';
 import CoordinatorsSurveyList from './components/pages/CoordinatorsSurveyList';
+import CoordinatorsEditSurveyPage from './components/pages/CoordinatorsEditSurveyPage';
+import CoordinatorsCreateSurveyPage from './components/pages/CoordinatorsCreateSurveyPage';
 
 function App() {
   
@@ -64,6 +66,8 @@ function App() {
         <Route path="/login" component={LogIn} />
         <Route path="/signup" component={SignUp} />
         <Route path="/coordinators-survey-list" component={CoordinatorsSurveyList} />
+        <Route path="/coordinators-edit-survey-page" component={CoordinatorsEditSurveyPage} />
+        <Route path='/coordinators-create-survey-page' component={CoordinatorsCreateSurveyPage} />
         <Ellipse />
         </Switch> 
       </div> 

@@ -261,10 +261,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     #button-create-new-survey-text {
         background: #EB5757;
         position: absolute;
-        width: 248px;
+        width: 200px;
         height: 52.65px;
-        left: 150px;
-        top: 100px;
+        left: 447px;
+        top: 148px;
         
     font-family: Poppins;
     font-style: normal;
@@ -281,31 +281,93 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     }
 
     #tableTitle {
-        text-align: center;
-        font-family: arial, sans-serif;
+        font-family: Poppins;
+        position: absolute;
+        width: 387.01px;
+        height: 91.64px;
+        left: 236px;
+        top: 96px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 26px;
+        color: #FFFFFF;
+        /* or 100% */
+
+        display: flex;
+        align-items: flex-end;
       }
       
       #surveys {
         text-align: center;
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-family: Poppins;
         border-collapse: collapse;
-        border: 3px solid #ddd;
+        border: 3px solid #606168;
         width: 100%;
+        color: white;
+        background-color: #202027;
       }
       
       #surveys td, #surveys th {
-        border: 1px solid #ddd;
+        border: 1px solid #606168;
         padding: 8px;
       }
       
-      #surveys tr:nth-child(even){background-color: #f2f2f2;}
+      /*#surveys tr:nth-child(even){background-color: #202027;}*/
       
-      #surveys tr:hover {background-color: #ddd;}
+      #surveys tr:hover {background-color: #606168;}
       
       #surveys th {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         text-align: center;
-        background-color: #4CAF50;
+        background-color: #1a1a1f;
         color: white;
       }
+
+      #button-edit {
+        background: #57EB80;
+        /*position: absolute;
+        width: 200px;
+        height: 52.65px;
+        left: 447px;
+        top: 148px;*/
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        /*line-height: 100px;*/
+        /* or 417% */
+        
+        /*align-items: center;
+        text-align: center;*/
+        
+        color: #FFFFFF;
+        
+        }
+        
+      #button-delete {
+        background: #EB5757;
+        /*position: absolute;
+        width: 200px;
+        height: 52.65px;
+        left: 447px;
+        top: 148px;*/
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        /*line-height: 100px;*/
+        /* or 417% */
+        
+        /*align-items: center;
+        text-align: center;*/
+        
+        color: #FFFFFF;
+        
+        }
+
