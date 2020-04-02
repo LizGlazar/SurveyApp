@@ -235,3 +235,181 @@ text-align: center;
 
 color: #FFFFFF;
 }
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+COORDINATORS SURVEY LIST PAGE
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* buttonGetStarted */
+#button-create-new-survey {
+    position: absolute;
+    width: 259px;
+    height: 52.65px;
+    left: 448px;
+    top: 148px;
+    }
+    
+    #button-create-new-suvey-rectangle {
+    position: absolute;
+    width: 259px;
+    height: 52.65px;
+    left: 448px;
+    top: 148px;
+    
+    background: #EB5757;
+    border-radius: 10px;
+    }
+    
+    #button-create-new-survey-text {
+        background: #EB5757;
+        position: absolute;
+        width: 200px;
+        height: 52.65px;
+        left: 447px;
+        top: 148px;
+        
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    /*line-height: 100px;*/
+    /* or 417% */
+    
+    /*align-items: center;
+    text-align: center;*/
+    
+    color: #FFFFFF;
+    
+    }
+
+    #tableTitle {
+        font-family: Poppins;
+        position: absolute;
+        width: 387.01px;
+        height: 91.64px;
+        left: 236px;
+        top: 96px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 26px;
+        color: #FFFFFF;
+        /* or 100% */
+
+        display: flex;
+        align-items: flex-end;
+      }
+      
+      #surveys {
+        text-align: center;
+        font-family: Poppins;
+        border-collapse: collapse;
+        border: 3px solid #606168;
+        width: 100%;
+        color: white;
+        background-color: #202027;
+      }
+      
+      #surveys td, #surveys th {
+        border: 1px solid #606168;
+        padding: 8px;
+      }
+      
+      /*#surveys tr:nth-child(even){background-color: #202027;}*/
+      
+      #surveys tr:hover {background-color: #606168;}
+      
+      #surveys th {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        background-color: #1a1a1f;
+        color: white;
+      }
+
+      #button-edit {
+        background: #57EB80;
+        /*position: absolute;
+        width: 200px;
+        height: 52.65px;
+        left: 447px;
+        top: 148px;*/
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        /*line-height: 100px;*/
+        /* or 417% */
+        
+        /*align-items: center;
+        text-align: center;*/
+        
+        color: #FFFFFF;
+        
+        }
+        
+      #button-delete {
+        background: #EB5757;
+        /*position: absolute;
+        width: 200px;
+        height: 52.65px;
+        left: 447px;
+        top: 148px;*/
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        /*line-height: 100px;*/
+        /* or 417% */
+        
+        /*align-items: center;
+        text-align: center;*/
+        
+        color: #FFFFFF;
+        
+        }
+
+        #button-show-results {
+          background: #57C7EB;
+          
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 13px;
+          /*line-height: 100px;*/
+          /* or 417% */
+          
+          /*align-items: center;
+          text-align: center;*/
+          
+          color: #FFFFFF;
+          
+          }
+
+          td {
+            height: 64px;
+            width: 225px;
+          }
+        /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        CREATE SURVEY PAGE
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+        #create-survey-page-text {
+          position: absolute;
+          width: 168px;
+          height: 24px;
+          left: 211px;
+          top: 149px;
+
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 24px;
+          /* identical to box height, or 100% */
+
+
+          color: #FFFFFF;
+        }
