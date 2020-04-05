@@ -5,12 +5,41 @@ import Ellipse from '../ellipseComponent/ellipse';
 
 function CoordinatorsCreateSurveyPage() {
   return (
-    <div>
+    <div id="create-survey-page-container">
       <form>
-        <h1 id="create-survey-page-text">Survey Name:</h1>
+            <div id="input-group-create-survey-page">
+            
+              <label>Survey Name:</label>
+              <input
+                type="text"
+                id="input-create-survey-page-name"
+                
+                />
+                </div>
 
+              <div id="input-group-create-survey-page">
+              <label>Question:</label>
+              <input
+                type="text"
+                id="input-create-survey-page-question"
+                
+                />
+                </div>
 
-        /<Button id="button-create-new-survey-text" variant="btn btn-success" onClick={() => history.push('/signup')}>CREATE NEW SURVEY</Button>
+              <div id="input-group-create-survey-page">
+              <label>Answers:</label>
+              <input
+                type="text"
+                id="input-create-survey-page-answers"
+                
+                />
+                
+                </div>
+
+                <div className="button-area-line">
+                <Button id="button-create-new-survey-text" variant="btn btn-success" onClick={() => history.push('/signup')}>CREATE NEW SURVEY</Button>
+                </div>
+
       
       </form>
      
