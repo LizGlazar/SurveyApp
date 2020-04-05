@@ -35,10 +35,13 @@ function CoordinatorsCreateSurveyPage() {
                 />
                 
                 </div>
-
-                <div className="button-area-line">
-                <Button id="button-create-new-survey-text" variant="btn btn-success" onClick={() => history.push('/signup')}>CREATE NEW SURVEY</Button>
+          
+                <div id="button-area-line">
+                <Button id="button-add-question" variant="btn btn-success" onClick={() => history.push('/signup')}>ADD QUESTION</Button>
+                <Button id="button-create-survey" variant="btn btn-success" onClick={() => history.push('/signup')}>CREATE SURVEY</Button>
+                <Button id="button-cancel" variant="btn btn-success" onClick={() => history.push('/signup')}>CANCEL</Button>
                 </div>
+               
 
       
       </form>

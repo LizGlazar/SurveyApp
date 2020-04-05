@@ -471,8 +471,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   
         }
 
-        .button-area-line {
+        #button-area-line {
           margin: 10px auto;
+          margin-left: 25px;
           display: -webkit-box;   
           display: -moz-box;  
           display: -ms-flexbox; 
@@ -483,5 +484,68 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           flex-direction: row;
           justify-content: space-between;
           flex-wrap: nowrap;
-          max-width: 90%;
+          max-width: 35%;
+        }
+
+        #button-add-question{
+          background: #57C7EB;
+          /*position: absolute;
+          width: 365.73px;
+          height: 73.53px;
+          left: 768.39px;
+          top: 552.47px;*/
+          
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 13px;
+          /*line-height: 100px;*/
+          /* or 417% */
+          
+          /*align-items: center;
+          text-align: center;*/
+          
+          color: #FFFFFF;
+        }
+
+        #button-create-survey{
+          background: #57EB80;
+          /*position: absolute;
+          width: 365.73px;
+          height: 73.53px;
+          left: 768.39px;
+          top: 552.47px;*/
+          
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 13px;
+          /*line-height: 100px;*/
+          /* or 417% */
+          
+          /*align-items: center;
+          text-align: center;*/
+          
+          color: #FFFFFF;
+        }
+
+        #button-cancel{
+          background: #EB5757;
+          /*position: absolute;
+          width: 365.73px;
+          height: 73.53px;
+          left: 768.39px;
+          top: 552.47px;*/
+          
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 13px;
+          /*line-height: 100px;*/
+          /* or 417% */
+          
+          /*align-items: center;
+          text-align: center;*/
+          
+          color: #FFFFFF;
         }
