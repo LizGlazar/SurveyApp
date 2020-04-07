@@ -441,8 +441,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-size: 19px;
           color: white;
           background: rgba(15, 15, 15, 0.01);
-       
-
+          width: 85%;
         }
 
         #input-create-survey-page-question {
@@ -454,6 +453,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-size: 19px;
           color: white;
           background: rgba(15, 15, 15, 0.01);
+          flex-grow: 15;
         
         }
 
@@ -466,6 +466,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-size: 19px;
           color: white;
           background: rgba(15, 15, 15, 0.01);
+          flex-grow: 15;
       
 
   
@@ -482,9 +483,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           -webkit-flex-direction: row;
           -moz-flex-direction: row;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: space-around;
           flex-wrap: nowrap;
-          max-width: 35%;
+          max-width: 50%;
         }
 
         #button-add-question{
@@ -548,4 +549,40 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           text-align: center;*/
           
           color: #FFFFFF;
+        }
+
+        #button-trash-can-delete-question {
+          background-image: url('trashcanIcon.svg');
+          background-repeat: no-repeat;
+          background-size: 35px 35px;
+          flex-grow: 1;
+          
+        }
+
+        #button-trash-can-delete-question {
+          background-image: url('trashcanIcon.svg');
+          background-repeat: no-repeat;
+        }
+
+        #button-trash-can-input-line {
+          display: inline-flex;
+          justify-content: space-between;
+        }
+
+        #button-plus {
+          background-image: url('plusIcon.svg');
+          background-repeat: no-repeat;
+          padding: 20px;
+        }
+        
+        #plus-button-line {
+          display: -ms-flexbox; 
+          display: -webkit-flex; 
+          display: flex;
+          -webkit-flex-direction: row;
+          -moz-flex-direction: row;
+          flex-direction: row;
+          justify-content: flex-end;
+          flex-wrap: nowrap;
+          max-width: 100%;
         }

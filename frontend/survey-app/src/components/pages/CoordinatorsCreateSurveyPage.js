@@ -10,24 +10,29 @@ function CoordinatorsCreateSurveyPage() {
             <div id="input-group-create-survey-page">
             
               <label>Survey Name:</label>
+             
               <input
                 type="text"
                 id="input-create-survey-page-name"
                 
                 />
                 </div>
-
               <div id="input-group-create-survey-page">
               <label>Question:</label>
+              <div id="button-trash-can-input-line">
+              <Button id="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => history.push('/signup')}></Button>
               <input
                 type="text"
                 id="input-create-survey-page-question"
                 
                 />
                 </div>
+                </div>
 
               <div id="input-group-create-survey-page">
               <label>Answers:</label>
+              <div id="button-trash-can-input-line">
+              <Button id="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => history.push('/signup')}></Button>
               <input
                 type="text"
                 id="input-create-survey-page-answers"
@@ -35,6 +40,10 @@ function CoordinatorsCreateSurveyPage() {
                 />
                 
                 </div>
+              </div>
+              <div id="plus-button-line">
+              <Button id="button-plus" color="none" onClick={() => history.push('/signup')}></Button>
+              </div>
           
                 <div id="button-area-line">
                 <Button id="button-add-question" variant="btn btn-success" onClick={() => history.push('/signup')}>ADD QUESTION</Button>
