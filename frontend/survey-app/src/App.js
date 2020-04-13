@@ -23,8 +23,48 @@ import history from './history';
 import CoordinatorsSurveyList from './components/pages/CoordinatorsSurveyList';
 import CoordinatorsEditSurveyPage from './components/pages/CoordinatorsEditSurveyPage';
 import CoordinatorsCreateSurveyPage from './components/pages/CoordinatorsCreateSurveyPage';
+import CoordinatorsShowResultsPage from './components/pages/CoordinatorsShowResultsPage';
+
+
+
 
 function App() {
+  /*constructor(){
+    super();
+    this.state = {
+      chartData:{}
+    }
+  }
+  //lifecycle hook (deprecated)
+  componentWillMount(){
+    this.getChartData();
+  }
+
+  getChartData(){
+    // Ajax calls here (fill the state with the data that comes in)
+    this.setState({
+      chartData:{
+        labels: ['A answers', 'B answers', 'C Answers', 'Other answers'], 
+        datasets:[
+          {
+            label: 'Number of respondents',
+            data: [
+              1,
+              2,
+              3,
+              4
+            ],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.6)',
+              'rgba(54, 162, 235, 0.6)',
+              'rgba(255, 206, 86, 0.6)',
+              'rgba(75, 192, 192, 0.6)'
+            ]
+          }
+        ]
+      }
+    });
+  } */
   
   /*constructor(props) {
     super(props);
@@ -68,6 +108,7 @@ function App() {
         <Route path="/coordinators-survey-list" component={CoordinatorsSurveyList} />
         <Route path="/coordinators-edit-survey-page" component={CoordinatorsEditSurveyPage} />
         <Route path='/coordinators-create-survey-page' component={CoordinatorsCreateSurveyPage} />
+        <Route path='/coordinators-show-results-page' component={CoordinatorsShowResultsPage} />
         <Ellipse />
         </Switch> 
       </div> 
