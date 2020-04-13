@@ -24,6 +24,7 @@ import CoordinatorsSurveyList from './components/pages/CoordinatorsSurveyList';
 import CoordinatorsEditSurveyPage from './components/pages/CoordinatorsEditSurveyPage';
 import CoordinatorsCreateSurveyPage from './components/pages/CoordinatorsCreateSurveyPage';
 import CoordinatorsShowResultsPage from './components/pages/CoordinatorsShowResultsPage';
+import RespondentsSurveyListPage from './components/pages/RespondentsSurveyListPage';
 
 
 
@@ -109,6 +110,7 @@ function App() {
         <Route path="/coordinators-edit-survey-page" component={CoordinatorsEditSurveyPage} />
         <Route path='/coordinators-create-survey-page' component={CoordinatorsCreateSurveyPage} />
         <Route path='/coordinators-show-results-page' component={CoordinatorsShowResultsPage} />
+        <Route path='/respondents-survey-list-page' component={RespondentsSurveyListPage} />
         <Ellipse />
         </Switch> 
       </div> 

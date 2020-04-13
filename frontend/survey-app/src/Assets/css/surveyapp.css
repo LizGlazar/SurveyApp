@@ -258,13 +258,19 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     border-radius: 10px;
     }
     
+    #tableTitleAndButtonContainer{
+      display: flex;
+      padding: 10px;
+      
+    }
+
     #button-create-new-survey-text {
         background: #EB5757;
-        position: absolute;
-        width: 200px;
+        /*position: absolute;
+       width: 200px;
         height: 52.65px;
         left: 447px;
-        top: 148px;
+        top: 15%;*/
         
     font-family: Poppins;
     font-style: normal;
@@ -278,15 +284,17 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     
     color: #FFFFFF;
     
+    
+    
     }
 
     #tableTitle {
         font-family: Poppins;
-        position: absolute;
+        /*position: absolute;
         width: 387.01px;
         height: 91.64px;
         left: 236px;
-        top: 96px;
+        top: 7%;*/
 
         font-family: Poppins;
         font-style: normal;
@@ -294,10 +302,11 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         font-size: 26px;
         line-height: 26px;
         color: #FFFFFF;
+        padding-right: 20px;
         /* or 100% */
 
-        display: flex;
-        align-items: flex-end;
+        /*display: flex;
+        align-items: flex-end;*/
       }
       
       #surveys {
@@ -587,9 +596,6 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           max-width: 100%;
         }
 
-       /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        SHOW RESULTS PAGE
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
         
         #input-show-results-page-answers{
           height: 2.5em;
@@ -602,3 +608,60 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           background: rgba(15, 15, 15, 0.01);
           width: 100%;
         }
+
+        
+       /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+       RESPONDENTS SURVEY LIST PAGE
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+        #respondents-table-button-container{
+          display: flex;
+          flex-direction: column;
+          padding: 2%;
+          
+        }
+
+        #button-complete {
+          background: #EB5757;
+          
+          /*position: absolute;
+          width: 200px;
+          height: 52.65px;
+          left: 447px;
+          top: 148px;*/
+          
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 13px;
+          /*line-height: 100px;*/
+          /* or 417% */
+          
+          /*align-items: center;
+          text-align: center;*/
+          
+          color: #FFFFFF;
+          
+          }
+
+          #button-show-results-green {
+            background: #57EB80;
+            /*position: absolute;
+            width: 200px;
+            height: 52.65px;
+            left: 447px;
+            top: 148px;*/
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            /*line-height: 100px;*/
+            /* or 417% */
+            
+            /*align-items: center;
+            text-align: center;*/
+            
+            color: #FFFFFF;
+            
+            }
