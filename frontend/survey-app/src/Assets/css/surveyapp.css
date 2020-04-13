@@ -665,3 +665,67 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
             color: #FFFFFF;
             
             }
+
+       /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+       RESPONDENTS SURVEY PAGE
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+        #respondents-survey-page-button-area-line {
+          margin: 10px auto;
+          margin-left: 25px;
+          display: -webkit-box;   
+          display: -moz-box;  
+          display: -ms-flexbox; 
+          display: -webkit-flex; 
+          display: flex;
+          -webkit-flex-direction: row;
+          -moz-flex-direction: row;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: nowrap;
+          max-width: 50%;
+        }
+
+        #respondents-survey-page-button-save{
+          background: #57EB80;
+          /*position: absolute;
+          width: 365.73px;
+          height: 73.53px;
+          left: 768.39px;
+          top: 552.47px;*/
+          
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 13px;
+          /*line-height: 100px;*/
+          /* or 417% */
+          
+          /*align-items: center;
+          text-align: center;*/
+          
+          color: #FFFFFF;
+
+        }
+
+        #respondents-survey-page-button-cancel{
+          background: #EB5757;
+          /*position: absolute;
+          width: 365.73px;
+          height: 73.53px;
+          left: 768.39px;
+          top: 552.47px;*/
+          
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 13px;
+          /*line-height: 100px;*/
+          /* or 417% */
+          
+          /*align-items: center;
+          text-align: center;*/
+          
+          color: #FFFFFF;
+        }
+
