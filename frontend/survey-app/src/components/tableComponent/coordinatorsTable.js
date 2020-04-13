@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Button } from 'reactstrap';
 import history from '../../history';
 
-class Table extends Component {
+class CoordinatorsTable extends Component {
    constructor(props) {
       super(props);
       /////
@@ -78,7 +78,10 @@ class Table extends Component {
     render() {
         return (
         <div>
+            <div id='tableTitleAndButtonContainer'>
             <h1 id='tableTitle'>Survey List</h1>
+            <Button id="button-create-new-survey-text" variant="btn btn-success" onClick={() => history.push('/coordinators-create-survey-page')}>CREATE NEW SURVEY</Button>
+            </div>
             <table id='surveys'>
                 <tbody>
                     <tr>{this.renderTableHeader()}</tr>
@@ -89,4 +92,4 @@ class Table extends Component {
         )
     }
 }
-export default Table;
+export default CoordinatorsTable;
