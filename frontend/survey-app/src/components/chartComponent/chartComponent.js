@@ -55,7 +55,7 @@ const chartConfig = {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
     datasets: [
       {
-        label: "# of Votes",
+        label: "Number of Respondents",
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
@@ -105,7 +105,7 @@ const Chart = () => {
     chartInstance.data.datasets[datasetIndex].data = newData;
     chartInstance.update();
   };
-
+/*
   const onButtonClick = () => {
     const data = [
       randomInt(),
@@ -116,11 +116,11 @@ const Chart = () => {
       randomInt()
     ];
     updateDataset(0, data);
-  };
+  };*/
 
   return (
     <div>
-      <button onClick={onButtonClick}>Randomize!</button>
+      {/*<button onClick={onButtonClick}>Randomize!</button>*/}
       <canvas ref={chartContainer} />
     </div>
   );

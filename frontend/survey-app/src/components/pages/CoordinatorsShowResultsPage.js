@@ -40,10 +40,10 @@ function CoordinatorsShowResultsPage() {
                 </div>
               </div>
 
-              {/*chart implementation*/}
+              {/*chart implementation
               <div class="chart-container">
                 <canvas id="survey-results-chart" width="800" height="450"></canvas>  
-              </div>
+              </div>*/}
 
               <Chart /*chartData={this.state.chartData}*//>
             
