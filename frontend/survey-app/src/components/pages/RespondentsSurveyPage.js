@@ -7,7 +7,7 @@ function RespondentsSurveyPage() {
   return (
     <div>
       
-     <h1>Survey Name</h1>
+     <h1 className='page-text'>Survey Name</h1>
      <p>
          Question
      </p>
