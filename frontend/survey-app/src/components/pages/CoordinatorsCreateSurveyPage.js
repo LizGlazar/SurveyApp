@@ -3,7 +3,31 @@ import { Button } from 'reactstrap'; // { { Button, Table}
 import history from '../../history';
 import Ellipse from '../ellipseComponent/ellipse';
 
-function CoordinatorsCreateSurveyPage() {
+class CoordinatorsCreateSurveyPage extends React.Component {
+  state = {
+    survey: {
+      name: 'Test Survey',
+      questions: [
+        {
+          questionText:'Question 1',
+          answers: ['Answer 1', 'Answer 2']
+        },
+        {
+          questionText: 'Q2',
+          answers: ['A1']
+        }
+      ]
+    }
+  };
+
+  removeAnswer(questionIndex, answerIndex) {
+   
+    let newState = Object.assign({}, this.state);
+    newState.survey.questions[questionIndex].answers.splice(answerIndex,1);
+    this.setState(newState);
+  }
+
+  render(){
   return (
     <div id="create-survey-page-container">
       <form>
@@ -14,33 +38,44 @@ function CoordinatorsCreateSurveyPage() {
               <input
                 type="text"
                 id="input-create-survey-page-name"
+                value={this.state.survey.name}
                 
                 />
                 </div>
               <div id="input-group-create-survey-page">
-              <label>Question:</label>
-              <div id="button-trash-can-input-line">
-              <Button id="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => history.push('/signup')}></Button>
-              <input
-                type="text"
-                id="input-create-survey-page-question"
-                
-                />
-                </div>
+              {this.state.survey.questions.map((item, questionIndex) => (
+                <div>
+                  <label>Question:</label>
+                  <div id="button-trash-can-input-line">
+                    <Button id="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => history.push('/signup')}></Button>
+                    <input
+                      type="text"
+                      id="input-create-survey-page-question"
+                      value={item.questionText}
+                    />
+                  </div>
+
+                  {item.answers.map((answer, answerIndex) => (
+                    <div id="input-group-create-survey-page">
+                      <label>Answers:</label>
+                      <div id="button-trash-can-input-line">
+                        <Button id="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => this.removeAnswer(questionIndex, answerIndex)}></Button>
+                        <input
+                          type="text"
+                          id="input-create-survey-page-answers"
+                          value={answer}
+                          />
+                      </div>
+                    </div>
+                  ) 
+                  )}
                 </div>
 
-              <div id="input-group-create-survey-page">
-              <label>Answers:</label>
-              <div id="button-trash-can-input-line">
-              <Button id="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => history.push('/signup')}></Button>
-              <input
-                type="text"
-                id="input-create-survey-page-answers"
-                
-                />
-                
-                </div>
+              ))
+              }
               </div>
+              
+             
               <div id="plus-button-line">
               <Button id="button-plus" color="none" onClick={() => history.push('/signup')}></Button>
               </div>
@@ -59,6 +94,7 @@ function CoordinatorsCreateSurveyPage() {
       <Ellipse />
     </div>
   );
+  }
 }
 
 export default CoordinatorsCreateSurveyPage;
