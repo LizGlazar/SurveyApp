@@ -21,7 +21,6 @@ class CoordinatorsCreateSurveyPage extends React.Component {
   };
 
   removeAnswer(questionIndex, answerIndex) {
-   
     let newState = Object.assign({}, this.state);
     newState.survey.questions[questionIndex].answers.splice(answerIndex,1);
     this.setState(newState);
@@ -29,40 +28,36 @@ class CoordinatorsCreateSurveyPage extends React.Component {
 
   render(){
   return (
-    <div id="create-survey-page-container">
+    <div className="create-survey-page-container">
       <form>
-            <div id="input-group-create-survey-page">
-            
+            <div className="input-group-create-survey-page">
               <label>Survey Name:</label>
-             
               <input
                 type="text"
-                id="input-create-survey-page-name"
+                className="input-create-survey-page-name"
                 value={this.state.survey.name}
-                
                 />
-                </div>
-              <div id="input-group-create-survey-page">
+            </div>
               {this.state.survey.questions.map((item, questionIndex) => (
-                <div>
+                <div className="input-group-create-survey-page"> {/*gdy ten div był nad this.state  nie wyglądało to dobrze, probelm był z linią pytania*/}
                   <label>Question:</label>
-                  <div id="button-trash-can-input-line">
-                    <Button id="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => history.push('/signup')}></Button>
+                  <p></p> {/*maybe this can be improved*/}
+                  <div className="button-trash-can-input-line">
+                    <Button className="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => history.push('/signup')}></Button>
                     <input
                       type="text"
-                      id="input-create-survey-page-question"
+                      className="input-create-survey-page-question"
                       value={item.questionText}
                     />
                   </div>
-
                   {item.answers.map((answer, answerIndex) => (
-                    <div id="input-group-create-survey-page">
+                    <div className="input-group-create-survey-page">
                       <label>Answers:</label>
-                      <div id="button-trash-can-input-line">
-                        <Button id="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => this.removeAnswer(questionIndex, answerIndex)}></Button>
+                      <div className="button-trash-can-input-line">
+                        <Button className="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => this.removeAnswer(questionIndex, answerIndex)}></Button>
                         <input
                           type="text"
-                          id="input-create-survey-page-answers"
+                          className="input-create-survey-page-answers"
                           value={answer}
                           />
                       </div>
@@ -70,29 +65,19 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                   ) 
                   )}
                 </div>
-
               ))
               }
-              </div>
-              
-             
               <div id="plus-button-line">
-              <Button id="button-plus" color="none" onClick={() => history.push('/signup')}></Button>
+                <Button id="button-plus" color="none" onClick={() => history.push('/signup')}></Button>
               </div>
-          
-                <div id="button-area-line">
+              <div id="button-area-line">
                 <Button id="button-add-question" variant="btn btn-success" onClick={() => history.push('/signup')}>ADD QUESTION</Button>
                 <Button id="button-create-survey" variant="btn btn-success" onClick={() => history.push('/signup')}>CREATE SURVEY</Button>
                 <Button id="button-cancel" variant="btn btn-success" onClick={() => history.push('/signup')}>CANCEL</Button>
-                </div>
-               
-
-      
+              </div>
       </form>
-     
-
-      <Ellipse />
-    </div>
+    <Ellipse />
+  </div>
   );
   }
 }

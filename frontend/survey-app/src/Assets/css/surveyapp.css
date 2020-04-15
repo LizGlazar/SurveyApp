@@ -409,7 +409,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         CREATE SURVEY PAGE
         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-        #create-survey-page-container {
+        .create-survey-page-container {
               width: 70%;
               height: 70%;
               display: -webkit-box;
@@ -428,7 +428,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
               margin-top: 20px;
             }
 
-        #input-group-create-survey-page{
+        .input-group-create-survey-page{
             color: white;
             text-align: left;
             font-family: Poppins, sans-serif;
@@ -446,7 +446,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          
         }
 
-        #input-create-survey-page-name {
+        .input-create-survey-page-name {
           height: 2.5em;
           border-radius:10px;
           border: 1px solid #EB5757;
@@ -458,7 +458,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           width: 85%;
         }
 
-        #input-create-survey-page-question {
+        .input-create-survey-page-question {
           height: 2.5em;
           border-radius:10px;
           border: 1px solid #EB5757;
@@ -467,11 +467,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-size: 19px;
           color: white;
           background: rgba(15, 15, 15, 0.01);
-          flex-grow: 15;
-        
+          flex-grow: 15;        
         }
 
-        #input-create-survey-page-answers {
+        .input-create-survey-page-answers {
           height: 2.5em;
           border-radius: 10px;
           border: 1px solid #EB5757;
@@ -565,7 +564,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           color: #FFFFFF;
         }
 
-        #button-trash-can-delete-question {
+        .button-trash-can-delete-question {
           background-image: url('trashcanIcon.svg');
           background-repeat: no-repeat;
           background-size: 35px 35px;
@@ -573,12 +572,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           
         }
 
-        #button-trash-can-delete-question {
-          background-image: url('trashcanIcon.svg');
-          background-repeat: no-repeat;
-        }
-
-        #button-trash-can-input-line {
+        .button-trash-can-input-line {
           display: inline-flex;
           justify-content: space-between;
         }
@@ -602,7 +596,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         }
 
         
-        #input-show-results-page-answers{
+        .input-show-results-page-answers{
           height: 2.5em;
           border-radius: 10px;
           border: 1px solid #EB5757;
