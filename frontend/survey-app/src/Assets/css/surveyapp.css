@@ -1,4 +1,12 @@
 
+html {
+  background: #2F303A no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
 .page-text {
   color: white;
   align-self: center;
@@ -7,8 +15,7 @@
 
 #landing-page-background {
 position: absolute;
-/*width: 1920px;
-height: 1080px;*/
+
 width: 100%;
 height: 100%;
 left: 0px;
@@ -16,6 +23,7 @@ top: 0px;
 
 
 background: #2F303A;
+z-index: -1;
 }
 
 /* Ellipse 1 */
@@ -25,6 +33,7 @@ width: 342px;
 height: 342px;
 left: 138px;
 top: 626px;
+z-index: 0;
 }
 
 /* Ellipse 5 */
@@ -34,6 +43,7 @@ width: 342px;
 height: 342px;
 left: 174px;
 top: 616px;
+z-index: 0;
 }
 
 /* Ellipse 2 */
@@ -43,6 +53,7 @@ width: 240px;
 height: 240px;
 left: 588px;
 top: 146px;
+z-index: 0;
 }
 
 /* Ellipse 6 */
@@ -52,6 +63,7 @@ width: 240px;
 height: 240px;
 left: 608px;
 top: 146px;
+z-index: 0;
 }
 
 /* Ellipse 3 */
@@ -62,6 +74,7 @@ width: 497px;
 height: 497px;
 left: 1500px;
 top: 661px;
+z-index: 0;
 }
 
 /* Ellipse 4 */
@@ -71,6 +84,7 @@ width: 497px;
 height: 497px;
 left: 1440px;
 top: 661px;
+z-index: 0;
 }
 
 /* Get The Feedback You Need */
