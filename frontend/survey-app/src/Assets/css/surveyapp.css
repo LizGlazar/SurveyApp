@@ -541,6 +541,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           text-align: center;*/
           
           color: #FFFFFF;
+          z-index: 1;
         }
 
         #button-create-survey{

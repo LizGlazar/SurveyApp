@@ -21,15 +21,19 @@ class CoordinatorsCreateSurveyPage extends React.Component {
   };
 
   removeAnswer(questionIndex, answerIndex) {
-    let newState = Object.assign({}, this.state);
-    newState.survey.questions[questionIndex].answers.splice(answerIndex,1);
-    this.setState(newState);
+    if (this.state.survey.questions[questionIndex].answers.length > 1) {
+      let newState = Object.assign({}, this.state);
+      newState.survey.questions[questionIndex].answers.splice(answerIndex,1);
+      this.setState(newState);
+    }
   }
 
   removeQuestion(questionIndex) {
-    let newState = Object.assign({}, this.state);
-    newState.survey.questions.splice(questionIndex,1);
-    this.setState(newState);
+    if (this.state.survey.questions.length > 1) {
+      let newState = Object.assign({}, this.state);
+      newState.survey.questions.splice(questionIndex,1);
+      this.setState(newState);
+    }
   }
 
   addQuestion() {
@@ -42,6 +46,13 @@ class CoordinatorsCreateSurveyPage extends React.Component {
     this.setState(newState);
   }
 
+  addAnswer(questionIndex) {    
+    let newState = Object.assign({}, this.state);
+    let newAnswer = "";
+    newState.survey.questions[questionIndex].answers.push(newAnswer);
+    this.setState(newState);
+
+  }
 
   render(){
   return (
@@ -67,9 +78,10 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                       value={item.questionText}
                     />
                   </div>
+                  <p></p> {/*maybe this can be improved*/}
+                  <label>Answers:</label>
                   {item.answers.map((answer, answerIndex) => (
                     <div className="input-group-create-survey-page">
-                      <label>Answers:</label>
                       <div className="button-trash-can-input-line">
                         <Button className="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => this.removeAnswer(questionIndex, answerIndex)}></Button>
                         <input
@@ -81,12 +93,12 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                     </div>
                   ) 
                   )}
+                  <div id="plus-button-line">
+                    <Button id="button-plus" color="none" onClick={() => this.addAnswer(questionIndex)}></Button>
+                  </div>
                 </div>
               ))
               }
-              <div id="plus-button-line">
-                <Button id="button-plus" color="none" onClick={() => history.push('/signup')}></Button>
-              </div>
               <div id="button-area-line">
                 <Button id="button-add-question" variant="btn btn-success" onClick={() => this.addQuestion()}>ADD QUESTION</Button>
                 <Button id="button-create-survey" variant="btn btn-success" onClick={() => history.push('/signup')}>CREATE SURVEY</Button>
