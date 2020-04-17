@@ -26,6 +26,23 @@ class CoordinatorsCreateSurveyPage extends React.Component {
     this.setState(newState);
   }
 
+  removeQuestion(questionIndex) {
+    let newState = Object.assign({}, this.state);
+    newState.survey.questions.splice(questionIndex,1);
+    this.setState(newState);
+  }
+
+  addQuestion() {
+    let newState = Object.assign({}, this.state);
+    let newQuestion = {
+      questionText: "test question",
+      answers: ["test answer"]
+    };
+    newState.survey.questions.push(newQuestion);
+    this.setState(newState);
+  }
+
+
   render(){
   return (
     <div className="create-survey-page-container">
@@ -43,7 +60,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                   <label>Question:</label>
                   <p></p> {/*maybe this can be improved*/}
                   <div className="button-trash-can-input-line">
-                    <Button className="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => history.push('/signup')}></Button>
+                    <Button className="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => this.removeQuestion(questionIndex)}></Button>
                     <input
                       type="text"
                       className="input-create-survey-page-question"
@@ -71,7 +88,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                 <Button id="button-plus" color="none" onClick={() => history.push('/signup')}></Button>
               </div>
               <div id="button-area-line">
-                <Button id="button-add-question" variant="btn btn-success" onClick={() => history.push('/signup')}>ADD QUESTION</Button>
+                <Button id="button-add-question" variant="btn btn-success" onClick={() => this.addQuestion()}>ADD QUESTION</Button>
                 <Button id="button-create-survey" variant="btn btn-success" onClick={() => history.push('/signup')}>CREATE SURVEY</Button>
                 <Button id="button-cancel" variant="btn btn-success" onClick={() => history.push('/signup')}>CANCEL</Button>
               </div>
