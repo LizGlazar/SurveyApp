@@ -519,7 +519,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           flex-direction: row;
           justify-content: space-around;
           flex-wrap: nowrap;
-          max-width: 50%;
+          max-width:35%;
         }
 
         #button-add-question{
@@ -533,7 +533,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
-          font-size: 13px;
+          font-size: 16px;
           /*line-height: 100px;*/
           /* or 417% */
           
@@ -555,7 +555,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
-          font-size: 13px;
+          font-size: 16px;
           /*line-height: 100px;*/
           /* or 417% */
           
@@ -576,7 +576,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
-          font-size: 13px;
+          font-size: 16px;
           /*line-height: 100px;*/
           /* or 417% */
           

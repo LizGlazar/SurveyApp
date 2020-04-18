@@ -102,7 +102,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
               <div id="button-area-line">
                 <Button id="button-add-question" variant="btn btn-success" onClick={() => this.addQuestion()}>ADD QUESTION</Button>
                 <Button id="button-create-survey" variant="btn btn-success" onClick={() => history.push('/signup')}>CREATE SURVEY</Button>
-                <Button id="button-cancel" variant="btn btn-success" onClick={() => history.push('/signup')}>CANCEL</Button>
+                <Button id="button-cancel" variant="btn btn-success" onClick={() => { if (window.confirm('Are you sure you wish to cancel editing?')) history.push('/signup')}}>CANCEL</Button>
               </div>
       </form>
     <Ellipse />

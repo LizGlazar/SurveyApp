@@ -12,7 +12,6 @@ function CoordinatorsShowResultsPage() {
             <div className="input-group-create-survey-page">
             
               <label>Survey Name:</label>
-             
               <input
                 type="text"
                 className="input-create-survey-page-name"
@@ -49,7 +48,6 @@ function CoordinatorsShowResultsPage() {
             
       
       </form>
-     
 
       <Ellipse />
     </div>
