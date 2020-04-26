@@ -1,15 +1,44 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from 'reactstrap';
 import history from '../../history';
 
-class CoordinatorsTable extends Component {
-   constructor(props) {
+function CoordinatorsTable() {
+   /*constructor(props) {
       super(props);
       /////
       /*this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);*/
-      /////      
-      this.state = { //state is by default an object
+      /////      */
+    const [surveys, setSurveys] = useState([
+        /*{ id: 1, surveyName: 'Customer Satisfaction', numberOfRespondents: 21, startDate: '10 May 2020', endDate: '10 May 2020'},
+        { id: 2, surveyName: 'Customer Trust', numberOfRespondents: 19, startDate: '05 October 2020', endDate: '05 October 2020'},
+        { id: 3, surveyName: 'Customer Attitudes', numberOfRespondents: 16, startDate: '25 December 2020', endDate: '25 December 2020'},*/
+     ]);
+
+     const [headers, setHeaders] = useState ({id: 'ID', surveyName: 'Survey Name', numberOfRespondents: 'Number of Respondents', startDate: 'Start Date', endDate: 'End Date', action: 'Action'});
+
+     const [error, setError] = useState(null);
+
+     const [isLoaded, setIsLoaded] = useState(false);
+
+     useEffect(() => {
+         fetch('http://localhost:8080/surveys')
+         .then(res => res.json())
+         .then(
+             (result) => {
+                 console.log(result);
+                 setIsLoaded(true);
+                 setSurveys(result);
+             },
+             (error) => {
+                 console.log(error);
+                 setIsLoaded(true);
+                 setError(error);
+             }
+         )
+     }, []) 
+
+    /* this.setState({ //state is by default an object
          surveys: [
             { id: 1, surveyName: 'Customer Satisfaction', numberOfRespondents: 21, startDate: '10 May 2020', endDate: '10 May 2020'},
             { id: 2, surveyName: 'Customer Trust', numberOfRespondents: 19, startDate: '05 October 2020', endDate: '05 October 2020'},
@@ -17,11 +46,10 @@ class CoordinatorsTable extends Component {
          ],
 
          headers: {id: 'ID', surveyName: 'Survey Name', numberOfRespondents: 'Number of Respondents', startDate: 'Start Date', endDate: 'End Date', action: 'Action'}
-      }
-   }
+      });*/
 
-   renderTableData() {
-        return this.state.surveys.map((survey, index) => {
+   function renderTableData() {
+        return surveys.map((survey, index) => {
         const { id, surveyName, numberOfRespondents, startDate, endDate} = survey //destructuring
         return (
             <tr key={id}>
@@ -68,15 +96,14 @@ class CoordinatorsTable extends Component {
 
 /////*/
 
-    renderTableHeader() {
-        let header = Object.keys(this.state.headers);
+    function renderTableHeader() {
+        let header = Object.keys(headers);
         return header.map((columnName, index) => {
-            return <th key={columnName}>{this.state.headers[columnName]}</th>
+            return <th key={columnName}>{headers[columnName]}</th>
         })
     }
 
-    render() {
-        return (
+    return (
         <div>
             <div id='tableTitleAndButtonContainer'>
             <h1 id='tableTitle'>Survey List</h1>
@@ -84,12 +111,11 @@ class CoordinatorsTable extends Component {
             </div>
             <table id='surveys'>
                 <tbody>
-                    <tr>{this.renderTableHeader()}</tr>
-                    {this.renderTableData()}
+                    <tr>{renderTableHeader()}</tr>
+                    {renderTableData()}
                 </tbody>
             </table>
         </div>
         )
-    }
 }
 export default CoordinatorsTable;
