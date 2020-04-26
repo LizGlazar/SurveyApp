@@ -1,4 +1,17 @@
 
+html {
+  background: #2F303A no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+
+html::-webkit-scrollbar{
+  display: none;
+}
+
 .page-text {
   color: white;
   align-self: center;
@@ -7,8 +20,7 @@
 
 #landing-page-background {
 position: absolute;
-/*width: 1920px;
-height: 1080px;*/
+
 width: 100%;
 height: 100%;
 left: 0px;
@@ -16,6 +28,7 @@ top: 0px;
 
 
 background: #2F303A;
+
 }
 
 /* Ellipse 1 */
@@ -25,6 +38,7 @@ width: 342px;
 height: 342px;
 left: 138px;
 top: 626px;
+z-index: 0;
 }
 
 /* Ellipse 5 */
@@ -34,6 +48,7 @@ width: 342px;
 height: 342px;
 left: 174px;
 top: 616px;
+z-index: 0;
 }
 
 /* Ellipse 2 */
@@ -43,6 +58,7 @@ width: 240px;
 height: 240px;
 left: 588px;
 top: 146px;
+z-index: 0;
 }
 
 /* Ellipse 6 */
@@ -52,6 +68,7 @@ width: 240px;
 height: 240px;
 left: 608px;
 top: 146px;
+z-index: 0;
 }
 
 /* Ellipse 3 */
@@ -62,6 +79,7 @@ width: 497px;
 height: 497px;
 left: 1500px;
 top: 661px;
+z-index: 0;
 }
 
 /* Ellipse 4 */
@@ -71,6 +89,7 @@ width: 497px;
 height: 497px;
 left: 1440px;
 top: 661px;
+z-index: 0;
 }
 
 /* Get The Feedback You Need */
@@ -409,7 +428,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         CREATE SURVEY PAGE
         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-        #create-survey-page-container {
+        .create-survey-page-container {
               width: 70%;
               height: 70%;
               display: -webkit-box;
@@ -428,7 +447,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
               margin-top: 20px;
             }
 
-        #input-group-create-survey-page{
+        .input-group-create-survey-page{
             color: white;
             text-align: left;
             font-family: Poppins, sans-serif;
@@ -446,7 +465,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          
         }
 
-        #input-create-survey-page-name {
+        .input-create-survey-page-name {
           height: 2.5em;
           border-radius:10px;
           border: 1px solid #EB5757;
@@ -458,7 +477,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           width: 85%;
         }
 
-        #input-create-survey-page-question {
+        .input-create-survey-page-question {
           height: 2.5em;
           border-radius:10px;
           border: 1px solid #EB5757;
@@ -467,11 +486,11 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-size: 19px;
           color: white;
           background: rgba(15, 15, 15, 0.01);
-          flex-grow: 15;
-        
+          flex-grow: 15;    
+          z-index: 1;    
         }
 
-        #input-create-survey-page-answers {
+        .input-create-survey-page-answers {
           height: 2.5em;
           border-radius: 10px;
           border: 1px solid #EB5757;
@@ -481,6 +500,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           color: white;
           background: rgba(15, 15, 15, 0.01);
           flex-grow: 15;
+          z-index: 1;
       
 
   
@@ -499,7 +519,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           flex-direction: row;
           justify-content: space-around;
           flex-wrap: nowrap;
-          max-width: 50%;
+          max-width:35%;
         }
 
         #button-add-question{
@@ -513,7 +533,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
-          font-size: 13px;
+          font-size: 16px;
           /*line-height: 100px;*/
           /* or 417% */
           
@@ -521,6 +541,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           text-align: center;*/
           
           color: #FFFFFF;
+          z-index: 1;
         }
 
         #button-create-survey{
@@ -534,7 +555,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
-          font-size: 13px;
+          font-size: 16px;
           /*line-height: 100px;*/
           /* or 417% */
           
@@ -555,7 +576,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
-          font-size: 13px;
+          font-size: 16px;
           /*line-height: 100px;*/
           /* or 417% */
           
@@ -565,28 +586,26 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           color: #FFFFFF;
         }
 
-        #button-trash-can-delete-question {
+        .button-trash-can-delete-question {
           background-image: url('trashcanIcon.svg');
           background-repeat: no-repeat;
           background-size: 35px 35px;
           flex-grow: 1;
+          z-index: 1;
           
         }
 
-        #button-trash-can-delete-question {
-          background-image: url('trashcanIcon.svg');
-          background-repeat: no-repeat;
-        }
-
-        #button-trash-can-input-line {
+        .button-trash-can-input-line {
           display: inline-flex;
           justify-content: space-between;
+          z-index: 1;
         }
 
         #button-plus {
           background-image: url('plusIcon.svg');
           background-repeat: no-repeat;
           padding: 20px;
+          z-index: 1;
         }
         
         #plus-button-line {
@@ -602,7 +621,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         }
 
         
-        #input-show-results-page-answers{
+        .input-show-results-page-answers{
           height: 2.5em;
           border-radius: 10px;
           border: 1px solid #EB5757;
@@ -612,6 +631,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           color: white;
           background: rgba(15, 15, 15, 0.01);
           width: 100%;
+          z-index: 1;
         }
 
         
@@ -732,5 +752,43 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           text-align: center;*/
           
           color: #FFFFFF;
+        }
+
+        /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+       ABOUT PAGE
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+        .about-section {
+          text-align: center;
+          font-size: 31px;
+          color: white;
+          font-weight: bold;
+          font-family: Poppins;
+          margin: auto;
+          padding: 17%;
+          line-height: 50px;
+        }
+
+        #new-paragraph{
+          padding: 30px;
+        }
+
+        /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+       CONTACT PAGE
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+        .contact-page-container {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 16%;
+          height: 100%;
+          color: white;
+          font-family: Poppins;
+          font-weight: bold;
+          font-size: 24px;
+        }
+
+        #contact-item{
+          text-align: center;
         }
 
