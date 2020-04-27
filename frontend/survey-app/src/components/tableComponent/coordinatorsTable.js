@@ -47,10 +47,23 @@ function CoordinatorsTable() {
 
          headers: {id: 'ID', surveyName: 'Survey Name', numberOfRespondents: 'Number of Respondents', startDate: 'Start Date', endDate: 'End Date', action: 'Action'}
       });*/
+    
+    function deleteSurvey(id) {
+        fetch('http://localhost:8080/surveys/' + id, {method: 'DELETE'})
+            .then(
+                (result) => {
+                    console.log('Successfully deleted survey ' + id + ' ' + result);
+                    window.location.reload();
+                },
+                (error) => {
+                    console.log('Failed to delete survey' + id + ' ' + error);
+                }
+            )
+        }
 
-   function renderTableData() {
+    function renderTableData() {
         return surveys.map((survey, index) => {
-        const { id, surveyName, numberOfRespondents, startDate, endDate} = survey //destructuring
+        const { id, surveyName, numberOfRespondents, startDate, endDate } = survey //destructuring
         return (
             <tr key={id}>
                 <td>{id}</td>
@@ -60,7 +73,7 @@ function CoordinatorsTable() {
                 <td>{endDate}</td>
                 <td>
                     <Button id="button-edit" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page/' + id)}>EDIT</Button>
-                    <Button id="button-delete" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page')}>DELETE</Button>
+                    <Button id="button-delete" variant="btn btn-success" onClick={() => deleteSurvey(id)}>DELETE</Button>
                     <Button id="button-show-results" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page')}>SHOW RESULTS</Button>
                 </td>
             </tr>
@@ -106,7 +119,7 @@ function CoordinatorsTable() {
     if (isLoaded) {
         if (error) {
             return (
-                <div Style="color: white">Error loading surveys: {error.message}</div>
+                <div style={{color: "white"}}>Error loading surveys: {error.message}</div>
             )
         } else {
             return (
@@ -126,7 +139,7 @@ function CoordinatorsTable() {
         }
     } else {
         return (
-            <div Style="color: white">Loading...</div>
+            <div style={{color: "white"}}>Loading...</div>
         )
     }
 }
