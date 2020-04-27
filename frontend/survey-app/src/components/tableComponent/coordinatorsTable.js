@@ -13,30 +13,30 @@ function CoordinatorsTable() {
         /*{ id: 1, surveyName: 'Customer Satisfaction', numberOfRespondents: 21, startDate: '10 May 2020', endDate: '10 May 2020'},
         { id: 2, surveyName: 'Customer Trust', numberOfRespondents: 19, startDate: '05 October 2020', endDate: '05 October 2020'},
         { id: 3, surveyName: 'Customer Attitudes', numberOfRespondents: 16, startDate: '25 December 2020', endDate: '25 December 2020'},*/
-     ]);
+    ]);
 
-     const [headers, setHeaders] = useState ({id: 'ID', surveyName: 'Survey Name', numberOfRespondents: 'Number of Respondents', startDate: 'Start Date', endDate: 'End Date', action: 'Action'});
+    const [headers, setHeaders] = useState ({id: 'ID', surveyName: 'Survey Name', numberOfRespondents: 'Number of Respondents', startDate: 'Start Date', endDate: 'End Date', action: 'Action'});
 
-     const [error, setError] = useState(null);
+    const [error, setError] = useState(null);
 
-     const [isLoaded, setIsLoaded] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
 
-     useEffect(() => {
-         fetch('http://localhost:8080/surveys')
-         .then(res => res.json())
-         .then(
-             (result) => {
-                 console.log(result);
-                 setIsLoaded(true);
-                 setSurveys(result);
-             },
-             (error) => {
-                 console.log(error);
-                 setIsLoaded(true);
-                 setError(error);
-             }
-         )
-     }, []) 
+    useEffect(() => {
+        fetch('http://localhost:8080/surveys')
+            .then(res => res.json())
+            .then(
+            (result) => {
+                console.log(result);
+                setIsLoaded(true);
+                setSurveys(result);
+            },
+            (error) => {
+                console.log(error);
+                setIsLoaded(true);
+                setError(error);
+            }
+        )
+    }, []) 
 
     /* this.setState({ //state is by default an object
          surveys: [
@@ -103,19 +103,31 @@ function CoordinatorsTable() {
         })
     }
 
-    return (
-        <div>
-            <div id='tableTitleAndButtonContainer'>
-            <h1 id='tableTitle'>Survey List</h1>
-            <Button id="button-create-new-survey-text" variant="btn btn-success" onClick={() => history.push('/coordinators-create-survey-page')}>CREATE NEW SURVEY</Button>
-            </div>
-            <table id='surveys'>
-                <tbody>
-                    <tr>{renderTableHeader()}</tr>
-                    {renderTableData()}
-                </tbody>
-            </table>
-        </div>
+    if (isLoaded) {
+        if (error) {
+            return (
+                <div Style="color: white">Error loading surveys: {error.message}</div>
+            )
+        } else {
+            return (
+                <div>
+                    <div id='tableTitleAndButtonContainer'>
+                    <h1 id='tableTitle'>Survey List</h1>
+                    <Button id="button-create-new-survey-text" variant="btn btn-success" onClick={() => history.push('/coordinators-create-survey-page')}>CREATE NEW SURVEY</Button>
+                    </div>
+                    <table id='surveys'>
+                        <tbody>
+                            <tr>{renderTableHeader()}</tr>
+                            {renderTableData()}
+                        </tbody>
+                    </table>
+                </div>
+                )
+        }
+    } else {
+        return (
+            <div Style="color: white">Loading...</div>
         )
+    }
 }
 export default CoordinatorsTable;
