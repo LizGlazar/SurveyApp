@@ -66,6 +66,24 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                 value={this.state.survey.name}
                 />
             </div>
+            <div className="input-group-date-line-container">
+              <div className="input-group-create-survey-page">
+                <label id="label-start-date">Start date:</label>
+                <input
+                  type="text"
+                  className="input-create-survey-page-name"
+                  value={this.state.survey.name}
+                  />
+              </div>
+              <div className="input-group-create-survey-page">
+                <label>End date:</label>
+                <input
+                  type="text"
+                  className="input-create-survey-page-name"
+                  value={this.state.survey.name}
+                  />
+              </div>
+            </div>
               {this.state.survey.questions.map((item, questionIndex) => (
                 <div className="input-group-create-survey-page"> {/*gdy ten div był nad this.state  nie wyglądało to dobrze, probelm był z linią pytania*/}
                   <label>Question:</label>

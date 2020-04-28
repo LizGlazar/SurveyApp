@@ -621,7 +621,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         }
 
         
-        .input-show-results-page-answers{
+        .input-show-results-page-answers {
           height: 2.5em;
           border-radius: 10px;
           border: 1px solid #EB5757;
@@ -634,6 +634,13 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           z-index: 1;
         }
 
+        .input-group-date-line-container {
+          display: inline-flex;
+          padding-left: 50px;
+          justify-content: space-evenly;
+        }
+
+    
         
        /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
        RESPONDENTS SURVEY LIST PAGE
