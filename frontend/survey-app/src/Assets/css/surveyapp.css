@@ -475,6 +475,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           color: white;
           background: rgba(15, 15, 15, 0.01);
           width: 85%;
+          z-index: 2;
         }
 
         .input-create-survey-page-question {
@@ -640,6 +641,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           justify-content: space-evenly;
         }
 
+        .react-datepicker-popper {
+          z-index: 2 !important          
+        }
     
         
        /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
