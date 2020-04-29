@@ -2,11 +2,15 @@ import React from 'react';
 import { Button } from 'reactstrap'; // { { Button, Table}
 import history from '../../history';
 import Ellipse from '../ellipseComponent/ellipse';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
 class CoordinatorsCreateSurveyPage extends React.Component {
   state = {
     survey: {
       name: 'Test Survey',
+      startDate: new Date(),
+      endDate: new Date(),
       questions: [
         {
           questionText:'Question 1',
@@ -54,6 +58,18 @@ class CoordinatorsCreateSurveyPage extends React.Component {
 
   }
 
+  setStartDate(startDate) {
+    let newState = Object.assign({}, this.state);
+    newState.startDate = startDate;
+    this.setState(newState);
+  }
+
+  setEndDate(endDate) {
+    let newState = Object.assign({}, this.state);
+    newState.endDate = endDate;
+    this.setState(newState);
+  }
+
   render(){
   return (
     <div className="create-survey-page-container">
@@ -65,6 +81,16 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                 className="input-create-survey-page-name"
                 value={this.state.survey.name}
                 />
+            </div>
+            <div className="input-group-date-line-container">
+              <div className="input-group-create-survey-page">
+                <label id="label-start-date">Start date:</label>
+                <DatePicker className="input-create-survey-page-name" selected={this.state.startDate} onChange={date => this.setStartDate(date)} />
+              </div>
+              <div className="input-group-create-survey-page">
+                <label>End date:</label>
+                <DatePicker className="input-create-survey-page-name" selected={this.state.endDate} onChange={date => this.setEndDate(date)} />
+              </div>
             </div>
               {this.state.survey.questions.map((item, questionIndex) => (
                 <div className="input-group-create-survey-page"> {/*gdy ten div był nad this.state  nie wyglądało to dobrze, probelm był z linią pytania*/}
