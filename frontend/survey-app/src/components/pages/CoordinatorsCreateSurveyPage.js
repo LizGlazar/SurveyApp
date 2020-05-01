@@ -8,19 +8,10 @@ import "react-datepicker/dist/react-datepicker.css";
 class CoordinatorsCreateSurveyPage extends React.Component {
   state = {
     survey: {
-      name: 'Test Survey',
+      name: '',
       startDate: new Date(),
       endDate: new Date(),
-      questions: [
-        {
-          questionText:'Question 1',
-          answers: ['Answer 1', 'Answer 2']
-        },
-        {
-          questionText: 'Q2',
-          answers: ['A1']
-        }
-      ]
+      questions: []
     }
   };
 
@@ -72,7 +63,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
 
   setSurveyName(surveyName) {
     let newState = Object.assign({}, this.state);
-    newState.survey.surveyName = surveyName;
+    newState.survey.name = surveyName;
     this.setState(newState);
   }
 
@@ -89,6 +80,19 @@ class CoordinatorsCreateSurveyPage extends React.Component {
   )
   }
 
+  setQuestionText(questionText, questionIndex) {
+    let newState = Object.assign({}, this.state);
+    newState.survey.questions[questionIndex].questionText = questionText;
+    this.setState(newState);
+  }
+
+  setAnswer(answer, questionIndex, answerIndex) {
+    let newState = Object.assign({}, this.state);
+    newState.survey.questions[questionIndex].answers[answerIndex] = answer;
+    this.setState(newState);
+  }
+
+
   render(){
   return (
     <div className="create-survey-page-container">
@@ -99,7 +103,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                 type="text"
                 className="input-create-survey-page-name"
                 value={this.state.survey.name}
-                onChange={surveyName => this.setSurveyName(surveyName)}
+                onChange={surveyName => this.setSurveyName(surveyName.target.value)}
                 />
             </div>
             <div className="input-group-date-line-container">
@@ -122,6 +126,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                       type="text"
                       className="input-create-survey-page-question"
                       value={item.questionText}
+                      onChange={questionText => this.setQuestionText(questionText.target.value, questionIndex)}
                     />
                   </div>
                   <p></p> {/*maybe this can be improved*/}
@@ -134,6 +139,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                           type="text"
                           className="input-create-survey-page-answers"
                           value={answer}
+                          onChange={answer => this.setAnswer(answer.target.value, questionIndex, answerIndex)}
                           />
                       </div>
                     </div>

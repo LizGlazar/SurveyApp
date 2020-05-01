@@ -564,6 +564,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           text-align: center;*/
           
           color: #FFFFFF;
+          z-index: 1;
         }
 
         #button-cancel{
@@ -585,6 +586,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           text-align: center;*/
           
           color: #FFFFFF;
+          z-index: 1;
         }
 
         .button-trash-can-delete-question {
