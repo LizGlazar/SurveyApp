@@ -588,6 +588,29 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           color: #FFFFFF;
           z-index: 1;
         }
+        
+        #button-save-survey{
+          background: #57EB80;
+          /*position: absolute;
+          width: 365.73px;
+          height: 73.53px;
+          left: 768.39px;
+          top: 552.47px;*/
+          
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          /*line-height: 100px;*/
+          /* or 417% */
+          
+          /*align-items: center;
+          text-align: center;*/
+          
+          color: #FFFFFF;
+          z-index: 1;
+        }
+        
 
         .button-trash-can-delete-question {
           background-image: url('trashcanIcon.svg');
