@@ -7,6 +7,15 @@ import "react-datepicker/dist/react-datepicker.css";
 
 class CoordinatorsEditSurveyPage extends React.Component {
 
+  state = {
+    survey: {
+      name: '',
+      startDate: new Date(),
+      endDate: new Date(),
+      questions: []
+    }
+  };
+
   componentDidMount(){
 
     const id = this.props.match.params.id;
@@ -18,6 +27,8 @@ class CoordinatorsEditSurveyPage extends React.Component {
           console.log('Successfully fetched survey ' + JSON.stringify(result));
           let newState = Object.assign({}, this.state);
           newState.survey = result;
+          newState.survey.startDate = Date.parse(newState.survey.startDate);
+          newState.survey.endDate = Date.parse(newState.survey.endDate);
           this.setState(newState);
       },
       (error) => {
@@ -105,7 +116,6 @@ class CoordinatorsEditSurveyPage extends React.Component {
   }
 
   render(){
-    if (this.state) {
     return (
       <div className="create-survey-page-container">
         <form>
@@ -172,19 +182,6 @@ class CoordinatorsEditSurveyPage extends React.Component {
       <Ellipse />
     </div>
     );
-    }
-  else {
-    return <div className="create-survey-page-container">
-              <form>
-              <div id="button-area-line">
-                  <Button id="button-add-question" variant="btn btn-success" disabled>ADD QUESTION</Button>
-                  <Button id="button-save-survey" variant="btn btn-success" disabled>SAVE SURVEY</Button>
-                  <Button id="button-cancel" variant="btn btn-success" disabled>CANCEL</Button>
-                </div>
-              </form>
-              <Ellipse />
-            </div>
-  }
   }
   }
 
