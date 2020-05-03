@@ -398,7 +398,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
             flex-direction: column;
             padding: 25px;
             flex-wrap: wrap;
-          
+           
          
         }
 
@@ -553,10 +553,11 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           display: inline-flex;
           padding-left: 50px;
           justify-content: space-evenly;
+          z-index: 2;
         }
 
         .react-datepicker-popper {
-          z-index: 2 !important          
+          z-index: 3 !important          
         }
     
         

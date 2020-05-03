@@ -7,10 +7,12 @@ import "react-datepicker/dist/react-datepicker.css";
 
 class CoordinatorsCreateSurveyPage extends React.Component {
   state = {
+    startDate: new Date(),
+    endDate: new Date(),
     survey: {
       name: '',
-      startDate: new Date(),
-      endDate: new Date(),
+      startDate: new Date().toISOString().slice(0, 10),
+      endDate: new Date().toISOString().slice(0, 10),
       questions: []
     }
   };
@@ -51,13 +53,15 @@ class CoordinatorsCreateSurveyPage extends React.Component {
 
   setStartDate(startDate) {
     let newState = Object.assign({}, this.state);
-    newState.survey.startDate = startDate;
+    newState.startDate = startDate;
+    newState.survey.startDate = startDate.toISOString().slice(0, 10);
     this.setState(newState);
   }
 
   setEndDate(endDate) {
     let newState = Object.assign({}, this.state);
-    newState.survey.endDate = endDate;
+    newState.endDate = endDate;
+    newState.survey.endDate = endDate.toISOString().slice(0, 10);
     this.setState(newState);
   }
 
@@ -109,11 +113,11 @@ class CoordinatorsCreateSurveyPage extends React.Component {
             <div className="input-group-date-line-container">
               <div className="input-group-create-survey-page">
                 <label id="label-start-date">Start date:</label>
-                <DatePicker className="input-create-survey-page-name" selected={this.state.survey.startDate} onChange={date => this.setStartDate(date)} />
+                <DatePicker className="input-create-survey-page-name" selected={this.state.startDate} onChange={date => this.setStartDate(date)} dateFormat="MMMM d, yyyy"/>
               </div>
               <div className="input-group-create-survey-page">
                 <label>End date:</label>
-                <DatePicker className="input-create-survey-page-name" selected={this.state.survey.endDate} onChange={date => this.setEndDate(date)} />
+                <DatePicker className="input-create-survey-page-name" selected={this.state.endDate} onChange={date => this.setEndDate(date)} dateFormat="MMMM d, yyyy"/>
               </div>
             </div>
               {this.state.survey.questions.map((item, questionIndex) => (
