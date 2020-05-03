@@ -113,11 +113,16 @@ class CoordinatorsCreateSurveyPage extends React.Component {
             <div className="input-group-date-line-container">
               <div className="input-group-create-survey-page">
                 <label id="label-start-date">Start date:</label>
-                <DatePicker className="input-create-survey-page-name" selected={this.state.startDate} onChange={date => this.setStartDate(date)} dateFormat="MMMM d, yyyy"/>
+                <DatePicker className="input-create-survey-page-name" selected={this.state.startDate} onChange={date => this.setStartDate(date)} dateFormat="MMMM d, yyyy" selectsStart 
+                  startDate={this.state.startDate}
+                  endDate={this.state.endDate}/>
               </div>
               <div className="input-group-create-survey-page">
                 <label>End date:</label>
-                <DatePicker className="input-create-survey-page-name" selected={this.state.endDate} onChange={date => this.setEndDate(date)} dateFormat="MMMM d, yyyy"/>
+                <DatePicker className="input-create-survey-page-name" selected={this.state.endDate} onChange={date => this.setEndDate(date)} dateFormat="MMMM d, yyyy" selectsEnd
+                  startDate={this.state.startDate}
+                  endDate={this.state.endDate}
+                  minDate={this.state.startDate} />
               </div>
             </div>
               {this.state.survey.questions.map((item, questionIndex) => (
