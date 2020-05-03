@@ -8,19 +8,10 @@ import "react-datepicker/dist/react-datepicker.css";
 class CoordinatorsCreateSurveyPage extends React.Component {
   state = {
     survey: {
-      name: 'Test Survey',
+      name: '',
       startDate: new Date(),
       endDate: new Date(),
-      questions: [
-        {
-          questionText:'Question 1',
-          answers: ['Answer 1', 'Answer 2']
-        },
-        {
-          questionText: 'Q2',
-          answers: ['A1']
-        }
-      ]
+      questions: []
     }
   };
 
@@ -60,15 +51,47 @@ class CoordinatorsCreateSurveyPage extends React.Component {
 
   setStartDate(startDate) {
     let newState = Object.assign({}, this.state);
-    newState.startDate = startDate;
+    newState.survey.startDate = startDate;
     this.setState(newState);
   }
 
   setEndDate(endDate) {
     let newState = Object.assign({}, this.state);
-    newState.endDate = endDate;
+    newState.survey.endDate = endDate;
     this.setState(newState);
   }
+
+  setSurveyName(surveyName) {
+    let newState = Object.assign({}, this.state);
+    newState.survey.name = surveyName;
+    this.setState(newState);
+  }
+
+  createSurvey() {
+    fetch('http://localhost:8080/surveys', {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state.survey)})
+    .then(
+      (result) => {
+          console.log('Successfully added survey ' + result);
+          history.push('/coordinators-survey-list');
+      },
+      (error) => {
+          console.log('Failed to add survey' + error);
+      }
+  )
+  }
+
+  setQuestionText(questionText, questionIndex) {
+    let newState = Object.assign({}, this.state);
+    newState.survey.questions[questionIndex].questionText = questionText;
+    this.setState(newState);
+  }
+
+  setAnswer(answer, questionIndex, answerIndex) {
+    let newState = Object.assign({}, this.state);
+    newState.survey.questions[questionIndex].answers[answerIndex] = answer;
+    this.setState(newState);
+  }
+
 
   render(){
   return (
@@ -80,16 +103,17 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                 type="text"
                 className="input-create-survey-page-name"
                 value={this.state.survey.name}
+                onChange={surveyName => this.setSurveyName(surveyName.target.value)}
                 />
             </div>
             <div className="input-group-date-line-container">
               <div className="input-group-create-survey-page">
                 <label id="label-start-date">Start date:</label>
-                <DatePicker className="input-create-survey-page-name" selected={this.state.startDate} onChange={date => this.setStartDate(date)} />
+                <DatePicker className="input-create-survey-page-name" selected={this.state.survey.startDate} onChange={date => this.setStartDate(date)} />
               </div>
               <div className="input-group-create-survey-page">
                 <label>End date:</label>
-                <DatePicker className="input-create-survey-page-name" selected={this.state.endDate} onChange={date => this.setEndDate(date)} />
+                <DatePicker className="input-create-survey-page-name" selected={this.state.survey.endDate} onChange={date => this.setEndDate(date)} />
               </div>
             </div>
               {this.state.survey.questions.map((item, questionIndex) => (
@@ -102,6 +126,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                       type="text"
                       className="input-create-survey-page-question"
                       value={item.questionText}
+                      onChange={questionText => this.setQuestionText(questionText.target.value, questionIndex)}
                     />
                   </div>
                   <p></p> {/*maybe this can be improved*/}
@@ -114,6 +139,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                           type="text"
                           className="input-create-survey-page-answers"
                           value={answer}
+                          onChange={answer => this.setAnswer(answer.target.value, questionIndex, answerIndex)}
                           />
                       </div>
                     </div>
@@ -127,8 +153,8 @@ class CoordinatorsCreateSurveyPage extends React.Component {
               }
               <div id="button-area-line">
                 <Button id="button-add-question" variant="btn btn-success" onClick={() => this.addQuestion()}>ADD QUESTION</Button>
-                <Button id="button-create-survey" variant="btn btn-success" onClick={() => history.push('/signup')}>CREATE SURVEY</Button>
-                <Button id="button-cancel" variant="btn btn-success" onClick={() => { if (window.confirm('Are you sure you wish to cancel editing?')) history.push('/signup')}}>CANCEL</Button>
+                <Button id="button-create-survey" variant="btn btn-success" onClick={() => this.createSurvey()}>CREATE SURVEY</Button>
+                <Button id="button-cancel" variant="btn btn-success" onClick={() => { if (window.confirm('Are you sure you wish to cancel editing?')) history.push('/coordinators-survey-list')}}>CANCEL</Button>
               </div>
       </form>
     <Ellipse />

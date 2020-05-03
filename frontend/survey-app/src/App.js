@@ -109,7 +109,7 @@ function App() {
         <Route path="/login" component={LogIn} />
         <Route path="/signup" component={SignUp} />
         <Route path="/coordinators-survey-list" component={CoordinatorsSurveyList} />
-        <Route path="/coordinators-edit-survey-page" component={CoordinatorsEditSurveyPage} />
+        <Route path="/coordinators-edit-survey-page/:id" component={CoordinatorsEditSurveyPage} />
         <Route path='/coordinators-create-survey-page' component={CoordinatorsCreateSurveyPage} />
         <Route path='/coordinators-show-results-page' component={CoordinatorsShowResultsPage} />
         <Route path='/respondents-survey-list-page' component={RespondentsSurveyListPage} />

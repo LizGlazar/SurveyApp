@@ -145,11 +145,6 @@ font-family: Poppins;
 font-style: normal;
 font-weight: bold;
 font-size: 24px;
-/*line-height: 100px;*/
-/* or 417% */
-
-/*align-items: center;
-text-align: center;*/
 
 color: #FFFFFF;
 
@@ -290,22 +285,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
     #button-create-new-survey-text {
         background: #EB5757;
-        /*position: absolute;
-       width: 200px;
-        height: 52.65px;
-        left: 447px;
-        top: 15%;*/
-        
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
     font-size: 13px;
-    /*line-height: 100px;*/
-    /* or 417% */
-    
-    /*align-items: center;
-    text-align: center;*/
-    
     color: #FFFFFF;
     
     
@@ -314,23 +297,12 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
     #tableTitle {
         font-family: Poppins;
-        /*position: absolute;
-        width: 387.01px;
-        height: 91.64px;
-        left: 236px;
-        top: 7%;*/
-
-        font-family: Poppins;
         font-style: normal;
         font-weight: 500;
         font-size: 26px;
         line-height: 26px;
         color: #FFFFFF;
         padding-right: 20px;
-        /* or 100% */
-
-        /*display: flex;
-        align-items: flex-end;*/
       }
       
       #surveys {
@@ -348,8 +320,6 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         padding: 8px;
       }
       
-      /*#surveys tr:nth-child(even){background-color: #202027;}*/
-      
       #surveys tr:hover {background-color: #606168;}
       
       #surveys th {
@@ -362,44 +332,21 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
       #button-edit {
         background: #57EB80;
-        /*position: absolute;
-        width: 200px;
-        height: 52.65px;
-        left: 447px;
-        top: 148px;*/
         
         font-family: Poppins;
         font-style: normal;
         font-weight: bold;
-        font-size: 13px;
-        /*line-height: 100px;*/
-        /* or 417% */
-        
-        /*align-items: center;
-        text-align: center;*/
-        
+        font-size: 13px;        
         color: #FFFFFF;
         
         }
         
       #button-delete {
         background: #EB5757;
-        /*position: absolute;
-        width: 200px;
-        height: 52.65px;
-        left: 447px;
-        top: 148px;*/
-        
         font-family: Poppins;
         font-style: normal;
         font-weight: bold;
         font-size: 13px;
-        /*line-height: 100px;*/
-        /* or 417% */
-        
-        /*align-items: center;
-        text-align: center;*/
-        
         color: #FFFFFF;
         
         }
@@ -411,12 +358,6 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-style: normal;
           font-weight: bold;
           font-size: 13px;
-          /*line-height: 100px;*/
-          /* or 417% */
-          
-          /*align-items: center;
-          text-align: center;*/
-          
           color: #FFFFFF;
           
           }
@@ -452,11 +393,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
             text-align: left;
             font-family: Poppins, sans-serif;
             font-size: 24px;
-            /*display: -webkit-box;
-            display: -ms-flexbox;*/
             display: flex;
-            /*-webkit-box-orient: vertical;
-            -webkit-box-direction: normal;*/
             -ms-flex-direction: column;
             flex-direction: column;
             padding: 25px;
@@ -525,67 +462,44 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
         #button-add-question{
           background: #57C7EB;
-          /*position: absolute;
-          width: 365.73px;
-          height: 73.53px;
-          left: 768.39px;
-          top: 552.47px;*/
-          
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
           font-size: 16px;
-          /*line-height: 100px;*/
-          /* or 417% */
-          
-          /*align-items: center;
-          text-align: center;*/
-          
           color: #FFFFFF;
           z-index: 1;
         }
 
         #button-create-survey{
-          background: #57EB80;
-          /*position: absolute;
-          width: 365.73px;
-          height: 73.53px;
-          left: 768.39px;
-          top: 552.47px;*/
-          
+          background: #57EB80;          
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
           font-size: 16px;
-          /*line-height: 100px;*/
-          /* or 417% */
-          
-          /*align-items: center;
-          text-align: center;*/
-          
           color: #FFFFFF;
+          z-index: 1;
         }
 
         #button-cancel{
-          background: #EB5757;
-          /*position: absolute;
-          width: 365.73px;
-          height: 73.53px;
-          left: 768.39px;
-          top: 552.47px;*/
-          
+          background: #EB5757;          
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
           font-size: 16px;
-          /*line-height: 100px;*/
-          /* or 417% */
-          
-          /*align-items: center;
-          text-align: center;*/
-          
           color: #FFFFFF;
+          z-index: 1;
         }
+        
+        #button-save-survey{
+          background: #57EB80;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          color: #FFFFFF;
+          z-index: 1;
+        }
+        
 
         .button-trash-can-delete-question {
           background-image: url('trashcanIcon.svg');
@@ -659,45 +573,20 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
         #button-complete {
           background: #EB5757;
-          
-          /*position: absolute;
-          width: 200px;
-          height: 52.65px;
-          left: 447px;
-          top: 148px;*/
-          
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
           font-size: 13px;
-          /*line-height: 100px;*/
-          /* or 417% */
-          
-          /*align-items: center;
-          text-align: center;*/
-          
           color: #FFFFFF;
           
           }
 
           #button-show-results-green {
-            background: #57EB80;
-            /*position: absolute;
-            width: 200px;
-            height: 52.65px;
-            left: 447px;
-            top: 148px;*/
-            
+            background: #57EB80;            
             font-family: Poppins;
             font-style: normal;
             font-weight: bold;
-            font-size: 13px;
-            /*line-height: 100px;*/
-            /* or 417% */
-            
-            /*align-items: center;
-            text-align: center;*/
-            
+            font-size: 13px;            
             color: #FFFFFF;
             
             }
@@ -724,44 +613,20 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
         #respondents-survey-page-button-save{
           background: #57EB80;
-          /*position: absolute;
-          width: 365.73px;
-          height: 73.53px;
-          left: 768.39px;
-          top: 552.47px;*/
-          
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
           font-size: 13px;
-          /*line-height: 100px;*/
-          /* or 417% */
-          
-          /*align-items: center;
-          text-align: center;*/
-          
           color: #FFFFFF;
 
         }
 
         #respondents-survey-page-button-cancel{
-          background: #EB5757;
-          /*position: absolute;
-          width: 365.73px;
-          height: 73.53px;
-          left: 768.39px;
-          top: 552.47px;*/
-          
+          background: #EB5757;          
           font-family: Poppins;
           font-style: normal;
           font-weight: bold;
-          font-size: 13px;
-          /*line-height: 100px;*/
-          /* or 417% */
-          
-          /*align-items: center;
-          text-align: center;*/
-          
+          font-size: 13px;          
           color: #FFFFFF;
         }
 
