@@ -28,6 +28,7 @@ top: 0px;
 
 
 background: #2F303A;
+z-index: -10;
 
 }
 
@@ -398,8 +399,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
             flex-direction: column;
             padding: 25px;
             flex-wrap: wrap;
-          
-         
+            z-index: 2;
         }
 
         .input-create-survey-page-name {
@@ -553,10 +553,11 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           display: inline-flex;
           padding-left: 50px;
           justify-content: space-evenly;
+          z-index: 2;
         }
 
         .react-datepicker-popper {
-          z-index: 2 !important          
+          z-index: 3 !important          
         }
     
         

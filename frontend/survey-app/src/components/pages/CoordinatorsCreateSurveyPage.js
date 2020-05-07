@@ -7,10 +7,12 @@ import "react-datepicker/dist/react-datepicker.css";
 
 class CoordinatorsCreateSurveyPage extends React.Component {
   state = {
+    startDate: new Date(),
+    endDate: new Date(),
     survey: {
       name: '',
-      startDate: new Date(),
-      endDate: new Date(),
+      startDate: new Date().toISOString().slice(0, 10),
+      endDate: new Date().toISOString().slice(0, 10),
       questions: []
     }
   };
@@ -19,6 +21,10 @@ class CoordinatorsCreateSurveyPage extends React.Component {
     if (this.state.survey.questions[questionIndex].answers.length > 1) {
       let newState = Object.assign({}, this.state);
       newState.survey.questions[questionIndex].answers.splice(answerIndex,1);
+      let answers = newState.survey.questions[questionIndex].answers;
+      for (let i = 0; i < answers.length; i++) {
+        answers[i].number = i;
+      }
       this.setState(newState);
     }
   }
@@ -27,15 +33,24 @@ class CoordinatorsCreateSurveyPage extends React.Component {
     if (this.state.survey.questions.length > 1) {
       let newState = Object.assign({}, this.state);
       newState.survey.questions.splice(questionIndex,1);
+      let questions = newState.survey.questions;
+      for (let i = 0; i < questions.length; i++) {
+        questions[i].number = i;
+      }
       this.setState(newState);
     }
   }
 
   addQuestion() {
     let newState = Object.assign({}, this.state);
+    let questionIndex = newState.survey.questions.length;
     let newQuestion = {
+      number: questionIndex,
       questionText: "test question",
-      answers: ["test answer"]
+      answers: [{
+        number: 0,
+        answerText: "test answer"
+      }]
     };
     newState.survey.questions.push(newQuestion);
     this.setState(newState);
@@ -43,21 +58,26 @@ class CoordinatorsCreateSurveyPage extends React.Component {
 
   addAnswer(questionIndex) {    
     let newState = Object.assign({}, this.state);
-    let newAnswer = "";
+    let answerIndex = newState.survey.questions[questionIndex].answers.length;
+    let newAnswer = {
+      number: answerIndex,
+      answerText: ""
+    };
     newState.survey.questions[questionIndex].answers.push(newAnswer);
     this.setState(newState);
-
   }
 
   setStartDate(startDate) {
     let newState = Object.assign({}, this.state);
-    newState.survey.startDate = startDate;
+    newState.startDate = startDate;
+    newState.survey.startDate = startDate.toISOString().slice(0, 10);
     this.setState(newState);
   }
 
   setEndDate(endDate) {
     let newState = Object.assign({}, this.state);
-    newState.survey.endDate = endDate;
+    newState.endDate = endDate;
+    newState.survey.endDate = endDate.toISOString().slice(0, 10);
     this.setState(newState);
   }
 
@@ -88,7 +108,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
 
   setAnswer(answer, questionIndex, answerIndex) {
     let newState = Object.assign({}, this.state);
-    newState.survey.questions[questionIndex].answers[answerIndex] = answer;
+    newState.survey.questions[questionIndex].answers[answerIndex].answerText = answer;
     this.setState(newState);
   }
 
@@ -109,11 +129,16 @@ class CoordinatorsCreateSurveyPage extends React.Component {
             <div className="input-group-date-line-container">
               <div className="input-group-create-survey-page">
                 <label id="label-start-date">Start date:</label>
-                <DatePicker className="input-create-survey-page-name" selected={this.state.survey.startDate} onChange={date => this.setStartDate(date)} />
+                <DatePicker className="input-create-survey-page-name" selected={this.state.startDate} onChange={date => this.setStartDate(date)} dateFormat="MMMM d, yyyy" selectsStart 
+                  startDate={this.state.startDate}
+                  endDate={this.state.endDate}/>
               </div>
               <div className="input-group-create-survey-page">
                 <label>End date:</label>
-                <DatePicker className="input-create-survey-page-name" selected={this.state.survey.endDate} onChange={date => this.setEndDate(date)} />
+                <DatePicker className="input-create-survey-page-name" selected={this.state.endDate} onChange={date => this.setEndDate(date)} dateFormat="MMMM d, yyyy" selectsEnd
+                  startDate={this.state.startDate}
+                  endDate={this.state.endDate}
+                  minDate={this.state.startDate} />
               </div>
             </div>
               {this.state.survey.questions.map((item, questionIndex) => (
@@ -138,7 +163,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                         <input
                           type="text"
                           className="input-create-survey-page-answers"
-                          value={answer}
+                          value={answer.answerText}
                           onChange={answer => this.setAnswer(answer.target.value, questionIndex, answerIndex)}
                           />
                       </div>
