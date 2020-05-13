@@ -1,93 +1,81 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from 'reactstrap';
 import history from '../../history';
 
-class RespondentsTable extends Component {
-   constructor(props) {
-      super(props);
-      /////
-      /*this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);*/
-      /////      
-      this.state = { //state is by default an object
-         surveys: [
-            { id: 1, surveyName: 'Customer Satisfaction', startDate: '10 May 2020', endDate: '10 May 2020'},
-            { id: 2, surveyName: 'Customer Trust', startDate: '05 October 2020', endDate: '05 October 2020'},
-            { id: 3, surveyName: 'Customer Attitudes', startDate: '25 December 2020', endDate: '25 December 2020'},
-         ],
+function RespondentsTable() {
+    const [surveys, setSurveys] = useState([]);
 
-         headers: {id: 'ID', surveyName: 'Survey Name', startDate: 'Start Date', endDate: 'End Date', action: 'Action'}
-      }
-   }
+    const [headers, setHeaders] = useState ({id: 'ID', surveyName: 'Survey Name', startDate: 'Start Date', endDate: 'End Date', action: 'Action'});
 
-   renderTableData() {
-        return this.state.surveys.map((survey, index) => {
-        const { id, surveyName, startDate, endDate} = survey //destructuring
-        return (
-            <tr key={id}>
-                <td>{id}</td>
-                <td>{surveyName}</td>
-                <td>{startDate}</td>
-                <td>{endDate}</td>
-                <td>
-                    <div id="respondents-table-button-container">
-                    <Button id="button-complete" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page')}>COMPLETE</Button>
-                
-                    <Button id="button-show-results-green" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page')}>SHOW RESULTS</Button>
-                    </div>
-                </td>
-            </tr>
+    const [error, setError] = useState(null);
+
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        fetch('http://localhost:8080/surveys')
+            .then(res => res.json())
+            .then(
+            (result) => {
+                console.log(result);
+                setIsLoaded(true);
+                setSurveys(result);
+            },
+            (error) => {
+                console.log(error);
+                setIsLoaded(true);
+                setError(error);
+            }
         )
+    }, []) 
+
+    function renderTableData() {
+        return surveys.map((survey, index) => {
+            const { id, surveyName, numberOfRespondents, startDate, endDate} = survey //destructuring
+            return (
+                <tr key={id}>
+                    <td>{id}</td>
+                    <td>{surveyName}</td>
+                    <td>{startDate}</td>
+                    <td>{endDate}</td>
+                    <td>
+                        <div id="respondents-table-button-container">
+                        <Button id="button-complete" variant="btn btn-success" onClick={() => history.push('/respondents-survey-page/' + id)}>COMPLETE</Button>
+                        <Button id="button-show-results-green" variant="btn btn-success" onClick={() => history.push('/respondents-survey-results-page/' + id)}>SHOW RESULTS</Button>
+                        </div>
+                    </td>
+                </tr>
+            )
         })
     }
-    
-    /////
-    /*https://stackoverflow.com/questions/40415846/remove-a-specific-table-row-on-onclick-event-in-react-component
-    https://www.pluralsight.com/guides/removing-items-react
-    */
 
-    ///
-    /*handleChange(e) {
-        this.setState({text: e.target.value});
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-        var newItem = {
-            text: this.props.w +''+this.props.t,
-            id: Date.now()
-        };
-        this.setState((prevState) => ({
-            items: prevState.items.concat(newItem),
-            text: ''
-        }));
-    }
-
-    delete(id){          // How does the function know the ID of an item that needs to be deleted and how does it delete the item?
-        this.setState(this.item.id)
-    }
-
-/////*/
-
-    renderTableHeader() {
-        let header = Object.keys(this.state.headers);
+    function renderTableHeader() {
+        let header = Object.keys(headers);
         return header.map((columnName, index) => {
-            return <th key={columnName}>{this.state.headers[columnName]}</th>
+            return <th key={columnName}>{headers[columnName]}</th>
         })
     }
 
-    render() {
+    if (isLoaded) {
+        if (error) {
+            return (
+                <div style={{color: "white"}}>Error loading surveys: {error.message}</div>
+            )
+        } else {
+            return (
+                <div>
+                    <h1 id='tableTitle'>Survey List</h1>
+                    <table id='surveys'>
+                        <tbody>
+                            <tr>{renderTableHeader()}</tr>
+                            {renderTableData()}
+                        </tbody>
+                    </table>
+                </div>
+                )
+        }
+    } else {
         return (
-        <div>
-            <h1 id='tableTitle'>Survey List</h1>
-            
-            <table id='surveys'>
-                <tbody>
-                    <tr>{this.renderTableHeader()}</tr>
-                    {this.renderTableData()}
-                </tbody>
-            </table>
-        </div>
+            <div style={{color: "white"}}>Loading...</div>
         )
     }
 }

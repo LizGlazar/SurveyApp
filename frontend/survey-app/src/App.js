@@ -111,10 +111,10 @@ function App() {
         <Route path="/coordinators-survey-list" component={CoordinatorsSurveyList} />
         <Route path="/coordinators-edit-survey-page/:id" component={CoordinatorsEditSurveyPage} />
         <Route path='/coordinators-create-survey-page' component={CoordinatorsCreateSurveyPage} />
-        <Route path='/coordinators-show-results-page' component={CoordinatorsShowResultsPage} />
+        <Route path='/coordinators-show-results-page/:id' component={CoordinatorsShowResultsPage} />
         <Route path='/respondents-survey-list-page' component={RespondentsSurveyListPage} />
-        <Route path='/respondents-survey-page' component={RespondentsSurveyPage} />
-        <Route path='/respondents-survey-results-page' component={RespondentsSurveyResultsPage} />
+        <Route path='/respondents-survey-page/:id' component={RespondentsSurveyPage} />
+        <Route path='/respondents-survey-results-page/:id' component={RespondentsSurveyResultsPage} />
         <Ellipse />
         </Switch> 
       </div> 
