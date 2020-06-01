@@ -63,21 +63,21 @@ function CoordinatorsTable() {
 
     function renderTableData() {
         return surveys.map((survey, index) => {
-        const { id, surveyName, numberOfRespondents, startDate, endDate } = survey //destructuring
-        return (
-            <tr key={id}>
-                <td>{id}</td>
-                <td>{surveyName}</td>
-                <td>{numberOfRespondents}</td>
-                <td>{startDate}</td>
-                <td>{endDate}</td>
-                <td>
-                    <Button id="button-edit" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page/' + id)}>EDIT</Button>
-                    <Button id="button-delete" variant="btn btn-success" onClick={() => deleteSurvey(id)}>DELETE</Button>
-                    <Button id="button-show-results" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page')}>SHOW RESULTS</Button>
-                </td>
-            </tr>
-        )
+            const { id, surveyName, numberOfRespondents, startDate, endDate } = survey //destructuring
+            return (
+                <tr key={id}>
+                    <td>{id}</td>
+                    <td>{surveyName}</td>
+                    <td>{numberOfRespondents}</td>
+                    <td>{startDate}</td>
+                    <td>{endDate}</td>
+                    <td>
+                        <Button id="button-edit" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page/' + id)}>EDIT</Button>
+                        <Button id="button-delete" variant="btn btn-success" onClick={() => deleteSurvey(id)}>DELETE</Button>
+                        <Button id="button-show-results" variant="btn btn-success" onClick={() => history.push('/coordinators-show-results-page/' + id)}>SHOW RESULTS</Button>
+                    </td>
+                </tr>
+            )
         })
     }
     

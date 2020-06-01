@@ -400,6 +400,8 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
             padding: 25px;
             flex-wrap: wrap;
             z-index: 2;
+
+            
         }
 
         .input-create-survey-page-name {
@@ -411,8 +413,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-size: 19px;
           color: white;
           background: rgba(15, 15, 15, 0.01);
-          width: 85%;
+          width: 100%; /*to be verified on other , previously 85%*/
           z-index: 2;
+
+        
         }
 
         .input-create-survey-page-question {
@@ -554,6 +558,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           padding-left: 50px;
           justify-content: space-evenly;
           z-index: 2;
+          white-space: pre;
         }
 
         .react-datepicker-popper {
