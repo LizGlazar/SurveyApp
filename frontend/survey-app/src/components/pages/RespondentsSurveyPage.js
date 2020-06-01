@@ -4,6 +4,7 @@ import history from '../../history';
 import Ellipse from '../ellipseComponent/ellipse';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import { queryByTestId } from '@testing-library/react';
 
 class RespondentsSurveyPage extends React.Component {
 
@@ -27,6 +28,16 @@ class RespondentsSurveyPage extends React.Component {
           console.log('Successfully fetched survey ' + JSON.stringify(result));
           let newState = Object.assign({}, this.state);
           newState.survey = result;
+          newState.filledSurvey = {
+            'id': result.id,
+            'answers': []
+          }
+          result.questions.forEach(question => {
+            newState.filledSurvey.answers.push({
+              'question': question.questionText,
+              'answer': question.answers[0].answerText
+            })
+          })
           this.setState(newState);
       },
       (error) => {
@@ -35,19 +46,25 @@ class RespondentsSurveyPage extends React.Component {
     )
   }
 
-  /*TODO* inny url
-    saveSurvey() {
-    fetch('http://localhost:8080/surveys/' + this.state.survey.id, {method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state.survey)})
+  onValueChange(questionIndex, answerText) {
+    let newState = Object.assign({}, this.state);
+    newState.filledSurvey.answers[questionIndex].answer = answerText;
+    this.setState(newState)
+  }
+
+  saveSurveyResults() {
+    fetch('http://localhost:8080/surveys/' + this.state.survey.id + "/answers", {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state.filledSurvey)})
     .then(
       (result) => {
-          console.log('Successfully updated survey ' + result);
-          history.push('/coordinators-survey-list');
+          console.log('Successfully saved survey results');
+          history.push('/respondents-survey-list-page');
       },
       (error) => {
           console.log('Failed to updated survey' + error);
       }
   )
-  } */
+  }
+
   render(){
     return (
       <div className="create-survey-page-container">
@@ -75,10 +92,13 @@ class RespondentsSurveyPage extends React.Component {
                     <label>Answers:</label>
                     {item.answers.map((answer, answerIndex) => (
                       <div className="input-group-create-survey-page">
-                         <div className="button-trash-can-input-line"> 
+                          <div className="button-trash-can-input-line"> 
                           <input 
                             type="radio" name={questionIndex} id={"" + questionIndex + "-" + answerIndex}
-                            className="button-trash-can-delete-question" value={answer.answerText}/>
+                            className="button-trash-can-delete-question" value={answer.answerText}
+                            checked={this.state.filledSurvey.answers[questionIndex].answer === answer.answerText}
+                            onChange={e => this.onValueChange(questionIndex, answer.answerText)}
+                            />
                             <label className="input-create-survey-page-answers"  for={"" + questionIndex + "-" + answerIndex}>{answer.answerText}</label>
                             </div>
                       </div>
@@ -88,8 +108,8 @@ class RespondentsSurveyPage extends React.Component {
                 ))
                 }
                 <div id="respondents-survey-page-button-area-line">
-                  <Button id="respondents-survey-page-button-save" variant="btn btn-success" onClick={() => history.push('/signup')}>SAVE</Button>
-                  <Button id="respondents-survey-page-button-cancel" variant="btn btn-success" onClick={() => history.push('/signup')}>CANCEL</Button>
+                  <Button id="respondents-survey-page-button-save" variant="btn btn-success" onClick={() => this.saveSurveyResults()}>SAVE</Button>
+                  <Button id="respondents-survey-page-button-cancel" variant="btn btn-success" onClick={() => history.push('/respondents-survey-list-page')}>CANCEL</Button>
                 </div>
 
         </form>
