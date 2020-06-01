@@ -47,6 +47,27 @@ class SignUpBox extends React.Component {
                 className="login-input"
                 placeholder="Password"/>
             </div>
+
+            <div className="input-group">
+              <div>
+              <input 
+                            type="radio" id="coordinator" name="role" value="coordinator" checked
+                            /*className="button-trash-can-delete-question" value={answer.answerText}
+                            checked={this.state.filledSurvey.answers[questionIndex].answer === answer.answerText}
+                            onChange={e => this.onValueChange(questionIndex, answer.answerText)}*/
+                            />
+            <label for="coordinator">I'm a Coordinator</label>
+            </div>
+            <div>
+            <input 
+                            type="radio" id="respondent" name="role" value="respondent"
+                            /*className="button-trash-can-delete-question" value={answer.answerText}
+                            checked={this.state.filledSurvey.answers[questionIndex].answer === answer.answerText}
+                            onChange={e => this.onValueChange(questionIndex, answer.answerText)}*/
+                            />
+            <label for="respondent">I'm a Respondent</label>
+            </div>
+            </div>
   
             <button
               type="button"
