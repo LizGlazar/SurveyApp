@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Button } from 'reactstrap'; // { { Button, Table}
 import history from '../../history';
 import Ellipse from '../ellipseComponent/ellipse';
-import Chart from '../chartComponent/chartComponent';
+import Chart from '../chartComponent/chart';
 
 function RespondentsSurveyResultsPage() {
 

@@ -118,7 +118,7 @@ class CoordinatorsEditSurveyPage extends React.Component {
           history.push('/coordinators-survey-list');
       },
       (error) => {
-          console.log('Failed to updated survey' + error);
+          console.log('Failed to update survey' + error);
       }
   )
   }
