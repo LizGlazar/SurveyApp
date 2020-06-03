@@ -29,8 +29,6 @@ import RespondentsSurveyPage from './components/pages/RespondentsSurveyPage';
 import RespondentsSurveyResultsPage from './components/pages/RespondentsSurveyResultsPage';
 
 
-
-
 function App() {
   /*constructor(){
     super();

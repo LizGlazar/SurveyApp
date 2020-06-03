@@ -44,12 +44,18 @@ class SignUpBox extends React.Component {
       fetch('http://localhost:8080/auth/signup', {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state)})
         .then(
           (result) => {
-              console.log('Successfully created user');
-              if (this.state.isCoordinator) {
-                history.push('/coordinators-create-survey-page');
+              if (result.status === 200) {
+                console.log('Successfully created user');
+                if (this.state.isCoordinator) {
+                  history.push('/coordinators-create-survey-page');
+                } else {
+                  history.push('/respondents-survey-list-page');
+                }
               } else {
-                history.push('/respondents-survey-list-page');
+                result.json()
+                .then(errorResponse => {alert('Failed to create user. ' + errorResponse.message)});
               }
+              
           },
           (error) => {
               console.log('Failed to create user' + error);
