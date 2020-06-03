@@ -81,7 +81,7 @@ class SignUpBox extends React.Component {
           <div className="box">
 
             <div className="input-group">
-              <label htmlFor="username">Name:</label> {/* email is used as username*/}
+              <label htmlFor="username">Name:</label>
               <input
                 type="text"
                 name="username"
@@ -95,7 +95,7 @@ class SignUpBox extends React.Component {
             </div>
   
             <div className="input-group">
-              <label htmlFor="email">Email:</label> {/* email is used as username*/}
+              <label htmlFor="email">Email:</label>
               <input
                 type="email"
                 name="email"
