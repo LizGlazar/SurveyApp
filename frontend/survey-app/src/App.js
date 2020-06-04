@@ -17,6 +17,7 @@ import Contact from './components/pages/Contact';
 import { Router, Switch, Route } from "react-router-dom";
 import LandingPage from './components/pages/LandingPage';
 import LogIn from './components/pages/LogIn';
+import LogOut from './components/pages/LogOut';
 import LoginBox from './components/loginBoxComponent/loginBox';
 import SignUp from './components/pages/SignUp';
 import history from './history';
@@ -105,6 +106,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={LogIn} />
+        <Route path="/logout" component={LogOut} />
         <Route path="/signup" component={SignUp} />
         <Route path="/coordinators-survey-list" component={CoordinatorsSurveyList} />
         <Route path="/coordinators-edit-survey-page/:id" component={CoordinatorsEditSurveyPage} />
