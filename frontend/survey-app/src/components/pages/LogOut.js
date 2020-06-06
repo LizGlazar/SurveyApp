@@ -2,7 +2,7 @@ import React from 'react';
 //import './Assets/css/surveyapp.css';
 import Nav from '../../Nav.js';
 import Ellipse from '../ellipseComponent/ellipse';
-import LoginBox from '../loginBoxComponent/loginBox';
+import LogOutBox from '../logOutBoxComponent/logOutBox';
 
 function LogOut() {
   return (
@@ -13,7 +13,7 @@ function LogOut() {
       <p id="landing-page-logo">SurveyApp</p>
       <Nav />
       <Ellipse />
-      <div className="child1LoginPageLoginBox"><LoginBox /></div>
+      <div className="child1LoginPageLoginBox"><LogOutBox /></div>
       
       <div className="child2LoginPageHeadline">
         <p>Gather <span Style="color: #EB5757; font-size: 90px">feedback</span><br /> to plan for future</p>

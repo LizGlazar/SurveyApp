@@ -1,11 +1,31 @@
 import React from 'react';
 import './Assets/css/surveyapp.css';
 import { Link } from 'react-router-dom';
+import history from './history';
+import {Button} from 'reactstrap';
 
 function Nav() {
 
   function isUserLoggedIn() {
     return localStorage.getItem('username') !== null;
+  }
+
+  function logout() {
+    if (window.confirm("Are you sure you want to log out?")) {
+      fetch("http://localhost:8080/auth/logout", {
+        method: 'POST',
+        credentials: 'include'
+      }).then(result => {
+        if (result.status === 200) {
+          console.log("Successfully logged out");
+          localStorage.removeItem("isCoordinator");
+          localStorage.removeItem("username");
+          history.push("/")
+        } else {
+          console.error("Failed to log user out");
+        }
+      })
+    }
   }
 
   function loginOrLogout() {
@@ -19,9 +39,9 @@ function Nav() {
       </Link>
       </div>
       } else {
-        return <Link to='/logout'>
+        return <Button onClick={logout}>
         <p id="button-logout" href="#">LOG OUT</p>
-        </Link>
+        </Button>
   }
   }
   return (
