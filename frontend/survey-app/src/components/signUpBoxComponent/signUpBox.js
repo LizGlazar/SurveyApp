@@ -41,7 +41,12 @@ class SignUpBox extends React.Component {
       console.log('handleSubmit() Submit form with state:', this.state);
       e.preventDefault();
       
-      fetch('http://localhost:8080/auth/signup', {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state)})
+      fetch('http://localhost:8080/auth/signup', {
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' }, 
+        body: JSON.stringify(this.state),
+        credentials: 'include'
+      })
         .then(
           (result) => {
               if (result.status === 200) {

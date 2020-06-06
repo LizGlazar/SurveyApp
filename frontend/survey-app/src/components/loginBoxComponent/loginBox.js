@@ -14,13 +14,19 @@ class LoginBox extends React.Component {
     handleSubmit = e => {
       console.log('handleSubmit() Submit form with state:', this.state);
       e.preventDefault();
-      fetch('http://localhost:8080/auth/login', {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state)})
+      fetch('http://localhost:8080/auth/login', {
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' }, 
+        body: JSON.stringify(this.state),
+        credentials: 'include'
+      })
         .then(
           (result) => {
               if (result.status === 200) {
                 console.log('Successfully logged in user');
                 result.json()
                 .then(response => {
+                  console.log(response);
                   localStorage.setItem('isCoordinator', response.isCoordinator);
                   localStorage.setItem('username', response.userName);
                   if (response.isCoordinator) {

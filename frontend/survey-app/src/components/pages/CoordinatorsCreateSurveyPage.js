@@ -88,7 +88,12 @@ class CoordinatorsCreateSurveyPage extends React.Component {
   }
 
   createSurvey() {
-    fetch('http://localhost:8080/surveys', {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state.survey)})
+    fetch('http://localhost:8080/surveys', {
+      method: 'POST', 
+      headers: { 'Content-Type': 'application/json' }, 
+      body: JSON.stringify(this.state.survey),
+      credentials: 'include'
+    })
     .then(
       (result) => {
           console.log('Successfully added survey ' + result);

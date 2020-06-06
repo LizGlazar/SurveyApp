@@ -22,7 +22,7 @@ class CoordinatorsEditSurveyPage extends React.Component {
 
     const id = this.props.match.params.id;
 
-    fetch('http://localhost:8080/surveys/' + id)
+    fetch('http://localhost:8080/surveys/' + id, {credentials: 'include'})
     .then(result => result.json())
     .then(
       (result) => {
@@ -111,7 +111,12 @@ class CoordinatorsEditSurveyPage extends React.Component {
   }
 
   updateSurvey() {
-    fetch('http://localhost:8080/surveys/' + this.state.survey.id, {method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state.survey)})
+    fetch('http://localhost:8080/surveys/' + this.state.survey.id, {
+      method: 'PUT', 
+      headers: { 'Content-Type': 'application/json' }, 
+      body: JSON.stringify(this.state.survey),
+      credentials: 'include'
+    })
     .then(
       (result) => {
           console.log('Successfully updated survey ' + result);
