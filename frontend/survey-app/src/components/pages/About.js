@@ -4,9 +4,11 @@ import Nav from '../../Nav.js';
 import Ellipse from '../ellipseComponent/ellipse';
 function About() {
   return (
+    <div className="parent-container">
+
     <div id="landing-page-background">
       <p id="landing-page-logo">SurveyApp</p>
-      <Nav />
+      {/*<Nav />*/}
       <Ellipse />
       <div className="about-section">
       
@@ -19,7 +21,7 @@ function About() {
       </div>
       </div>
 
-    
+    </div>
     </div>
   );
 }

@@ -28,6 +28,7 @@ import CoordinatorsShowResultsPage from './components/pages/CoordinatorsShowResu
 import RespondentsSurveyListPage from './components/pages/RespondentsSurveyListPage';
 import RespondentsSurveyPage from './components/pages/RespondentsSurveyPage';
 import RespondentsSurveyResultsPage from './components/pages/RespondentsSurveyResultsPage';
+import TermsAndConditions from './components/pages/Terms&Conditions';
 
 
 function App() {
@@ -105,6 +106,7 @@ function App() {
         <Route path="/" exact component={LandingPage} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/terms-and-conditions" component={TermsAndConditions} />
         <Route path="/login" component={LogIn} />
         <Route path="/logout" component={LogOut} />
         <Route path="/signup" component={SignUp} />

@@ -254,6 +254,25 @@ text-align: center;
 color: #FFFFFF;
 }
 
+#button-terms-and-conditions {
+  position: absolute;
+width: 115px;
+height: 24px;
+left: 1680px;
+top: 30px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 24px;
+/* identical to box height, or 100% */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
 /* SurveyApp */
 
 #landing-page-logo {
@@ -743,5 +762,17 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
         #contact-item{
           text-align: center;
-        }
+        } 
 
+        /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        NAVBAR
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+        .nav-item {
+          color: white !important;
+          font-family: Poppins;
+          
+      
+        }
+        
+      
+        

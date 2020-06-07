@@ -4,9 +4,10 @@ import Nav from '../../Nav.js';
 import Ellipse from '../ellipseComponent/ellipse';
 function Contact() {
   return (
+    <div className="parent-container">
     <div id="landing-page-background">
     <p id="landing-page-logo">SurveyApp</p>
-      <Nav />
+      {/*<Nav />*/}
       <Ellipse />
 
       <div className="contact-page-container">
@@ -16,6 +17,7 @@ function Contact() {
       </div>
 
     
+    </div>
     </div>
   );
 }
