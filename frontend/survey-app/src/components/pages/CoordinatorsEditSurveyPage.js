@@ -110,11 +110,14 @@ class CoordinatorsEditSurveyPage extends React.Component {
     this.setState(newState);
   }
 
-  updateSurvey() {
+  updateSurvey(published) {
+    let newState = Object.assign({}, this.state);
+    newState.survey.published = published;
+    
     fetch('http://localhost:8080/surveys/' + this.state.survey.id, {
       method: 'PUT', 
       headers: { 'Content-Type': 'application/json' }, 
-      body: JSON.stringify(this.state.survey),
+      body: JSON.stringify(newState.survey),
       credentials: 'include'
     })
     .then(
@@ -197,15 +200,16 @@ class CoordinatorsEditSurveyPage extends React.Component {
                       </div>
                     ) 
                     )}
-                    <div id="plus-button-line">
-                      <Button id="button-plus" color="none" onClick={() => this.addAnswer(questionIndex)}></Button>
+                    <div className="plus-button-line">
+                      <Button className="button-plus" color="none" onClick={() => this.addAnswer(questionIndex)}></Button>
                     </div>
                   </div>
                 ))
                 }
                 <div id="button-area-line">
                   <Button id="button-add-question" variant="btn btn-success" onClick={() => this.addQuestion()}>ADD QUESTION</Button>
-                  <Button id="button-save-survey" variant="btn btn-success" onClick={() => this.updateSurvey()}>SAVE SURVEY</Button>
+                  <Button id="button-save-survey" variant="btn btn-success" onClick={() => this.updateSurvey(false)}>SAVE SURVEY</Button>
+                  <Button id="button-publish-survey" variant="btn btn-success" onClick={() => this.updateSurvey(true)}>PUBLISH SURVEY</Button> {/*poprawić css*/}
                   <Button id="button-cancel" variant="btn btn-success" onClick={() => { if (window.confirm('Are you sure you wish to cancel editing?')) history.push('/coordinators-survey-list')}}>CANCEL</Button>
                 </div>
         </form>

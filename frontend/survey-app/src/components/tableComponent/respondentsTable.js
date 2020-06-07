@@ -40,9 +40,9 @@ function RespondentsTable() {
                     <td>{startDate}</td>
                     <td>{endDate}</td>
                     <td>
-                        <div id="respondents-table-button-container">
-                        <Button id="button-complete" variant="btn btn-success" onClick={() => history.push('/respondents-survey-page/' + id)}>COMPLETE</Button>
-                        <Button id="button-show-results-green" variant="btn btn-success" onClick={() => history.push('/respondents-survey-results-page/' + id)}>SHOW RESULTS</Button>
+                        <div className="respondents-table-button-container">
+                        <Button className="button-complete" variant="btn btn-success" onClick={() => history.push('/respondents-survey-page/' + id)}>COMPLETE</Button>
+                        <Button className="button-show-results-green" variant="btn btn-success" onClick={() => history.push('/respondents-survey-results-page/' + id)}>SHOW RESULTS</Button>
                         </div>
                     </td>
                 </tr>

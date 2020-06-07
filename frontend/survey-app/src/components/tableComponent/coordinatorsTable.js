@@ -68,7 +68,7 @@ function CoordinatorsTable() {
 
     function renderTableData() {
         return surveys.map((survey, index) => {
-            const { id, surveyName, numberOfRespondents, startDate, endDate } = survey //destructuring
+            const { id, surveyName, numberOfRespondents, startDate, endDate, published } = survey //destructuring
             return (
                 <tr key={id}>
                     <td>{id}</td>
@@ -77,9 +77,9 @@ function CoordinatorsTable() {
                     <td>{startDate}</td>
                     <td>{endDate}</td>
                     <td>
-                        <Button id="button-edit" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page/' + id)}>EDIT</Button>
-                        <Button id="button-delete" variant="btn btn-success" onClick={() => deleteSurvey(id)}>DELETE</Button>
-                        <Button id="button-show-results" variant="btn btn-success" onClick={() => history.push('/coordinators-show-results-page/' + id)}>SHOW RESULTS</Button>
+                        <Button className="button-edit" variant="btn btn-success" onClick={() => history.push('/coordinators-edit-survey-page/' + id)} disabled={published}>EDIT</Button>
+                        <Button className="button-delete" variant="btn btn-success" onClick={() => deleteSurvey(id)}>DELETE</Button>
+                        <Button className="button-show-results" variant="btn btn-success" onClick={() => history.push('/coordinators-show-results-page/' + id)}>SHOW RESULTS</Button>
                     </td>
                 </tr>
             )
