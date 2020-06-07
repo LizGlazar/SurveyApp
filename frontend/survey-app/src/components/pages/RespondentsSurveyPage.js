@@ -21,7 +21,7 @@ class RespondentsSurveyPage extends React.Component {
 
     const id = this.props.match.params.id;
 
-    fetch('http://localhost:8080/surveys/' + id)
+    fetch('http://localhost:8080/surveys/' + id, {credentials: 'include'})
     .then(result => result.json())
     .then(
       (result) => {
@@ -53,7 +53,12 @@ class RespondentsSurveyPage extends React.Component {
   }
 
   saveSurveyResults() {
-    fetch('http://localhost:8080/surveys/' + this.state.survey.id + "/answers", {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state.filledSurvey)})
+    fetch('http://localhost:8080/surveys/' + this.state.survey.id + "/answers", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(this.state.filledSurvey),
+      credentials: 'include'
+    })
     .then(
       (result) => {
           console.log('Successfully saved survey results');

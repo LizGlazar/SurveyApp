@@ -12,7 +12,9 @@ function RespondentsTable() {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:8080/surveys')
+        fetch('http://localhost:8080/surveys', {
+            credentials: 'include'
+          })
             .then(res => res.json())
             .then(
             (result) => {

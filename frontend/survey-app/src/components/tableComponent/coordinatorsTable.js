@@ -22,7 +22,9 @@ function CoordinatorsTable() {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:8080/surveys')
+        fetch('http://localhost:8080/surveys', {
+            credentials: 'include'
+          })
             .then(res => res.json())
             .then(
             (result) => {
@@ -49,7 +51,10 @@ function CoordinatorsTable() {
       });*/
     
     function deleteSurvey(id) {
-        fetch('http://localhost:8080/surveys/' + id, {method: 'DELETE'})
+        fetch('http://localhost:8080/surveys/' + id, {
+            method: 'DELETE',
+            credentials: 'include'
+        })
             .then(
                 (result) => {
                     console.log('Successfully deleted survey ' + id + ' ' + result);

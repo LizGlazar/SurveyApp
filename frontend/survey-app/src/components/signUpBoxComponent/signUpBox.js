@@ -41,7 +41,12 @@ class SignUpBox extends React.Component {
       console.log('handleSubmit() Submit form with state:', this.state);
       e.preventDefault();
       
-      fetch('http://localhost:8080/auth/signup', {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.state)})
+      fetch('http://localhost:8080/auth/signup', {
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' }, 
+        body: JSON.stringify(this.state),
+        credentials: 'include'
+      })
         .then(
           (result) => {
               if (result.status === 200) {
@@ -81,7 +86,7 @@ class SignUpBox extends React.Component {
           <div className="box">
 
             <div className="input-group">
-              <label htmlFor="username">Name:</label> {/* email is used as username*/}
+              <label htmlFor="username">Name:</label>
               <input
                 type="text"
                 name="username"
@@ -95,7 +100,7 @@ class SignUpBox extends React.Component {
             </div>
   
             <div className="input-group">
-              <label htmlFor="email">Email:</label> {/* email is used as username*/}
+              <label htmlFor="email">Email:</label>
               <input
                 type="email"
                 name="email"
