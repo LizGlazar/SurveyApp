@@ -175,8 +175,8 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                     </div>
                   ) 
                   )}
-                  <div id="plus-button-line">
-                    <Button id="button-plus" color="none" onClick={() => this.addAnswer(questionIndex)}></Button>
+                  <div className="plus-button-line">
+                    <Button className="button-plus" color="none" onClick={() => this.addAnswer(questionIndex)}></Button>
                   </div>
                 </div>
               ))

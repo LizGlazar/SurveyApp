@@ -5,7 +5,8 @@ import Nav from '../../Nav.js';
 import Ellipse from '../ellipseComponent/ellipse';
 function LandingPage() {
   return (
-    <div>
+    
+      <div className="parent-container">
       <p id="landing-page-text">Get The Feedback You Need</p>
       <p id="landing-page-logo">SurveyApp</p>
       <form>
@@ -15,6 +16,7 @@ function LandingPage() {
       {/*<Nav />*/}
       <Ellipse />
     </div>
+    
   );
 }
 

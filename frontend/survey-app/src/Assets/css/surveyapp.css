@@ -16,6 +16,7 @@ html::-webkit-scrollbar{
   color: white;
   align-self: center;
 }
+
 /* landing-page-background */
 
 #landing-page-background {
@@ -594,7 +595,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           background-image: url('plusIcon.svg');
           background-repeat: no-repeat;
           padding: 20px;
-          z-index: 3 !important;
+          z-index: 10000 !important;
 
           display: inline-block;
     font-weight: 400;
@@ -627,6 +628,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           justify-content: flex-end;
           flex-wrap: nowrap;
           max-width: 100%;
+          z-index: 100;
         }
 
         
@@ -750,7 +752,11 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
         .contact-page-container {
-          display: flex;
+          margin-right: auto;
+          margin-left: auto;
+          padding-left: 15px;
+          padding-right: 15px;
+         
           justify-content: space-around;
           margin-top: 16%;
           height: 100%;
@@ -758,6 +764,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-family: Poppins;
           font-weight: bold;
           font-size: 24px;
+
+          margin-left: 10%;
+          margin-right: 10%;
         }
 
         #contact-item{
@@ -772,6 +781,13 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           font-family: Poppins;
           
       
+        }
+
+         /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        TERMS AND CONDITIONS PAGE
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+        h3 {
+          padding-top: 2%;
         }
         
       
