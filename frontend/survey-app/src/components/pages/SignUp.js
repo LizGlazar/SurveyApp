@@ -9,7 +9,7 @@ function SignUp() {
       <div className="parent-container">
       <div id="landing-page-background">
         <p id="landing-page-logo">SurveyApp</p>
-        <Nav />
+        {/*<Nav />*/}
         <Ellipse />
         <div className="child1LoginPageLoginBox"><SignUpBox /></div>
         

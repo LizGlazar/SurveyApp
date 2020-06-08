@@ -2,7 +2,13 @@ import React from 'react';
 import './Assets/css/surveyapp.css';
 import { Link } from 'react-router-dom';
 import history from './history';
-import {Button} from 'reactstrap';
+import { Button,
+  Navbar,
+  Nav as BootstrapNav,
+  NavItem,
+  NavLink,
+  NavbarText
+} from 'reactstrap';
 
 function Nav() {
 
@@ -30,30 +36,52 @@ function Nav() {
 
   function loginOrLogout() {
     if (!isUserLoggedIn()) {
-      return <div>
-      <Link to='/login'>
-      <p id="button-login" href="#">LOG IN</p>
+      return <div Style="display: flex">
+         <NavItem>
+              <NavLink href="/login">LOGIN</NavLink>
+        </NavItem>
+        <NavItem>
+              <NavLink href="/signup">SIGN UP</NavLink>
+        </NavItem>
+      {/*<Link to='/login'>
+      <p className="nav-item" id="button-login" href="#">LOG IN</p>
       </Link>
       <Link to='/signup'>
-      <p id="button-sign-up" href="#">SIGN UP</p>
-      </Link>
+      <p className="nav-item" id="button-sign-up" href="#">SIGN UP</p>
+    </Link>*/}
       </div>
       } else {
-        return <Button onClick={logout}>
-        <p id="button-logout" href="#">LOG OUT</p>
-        </Button>
+        return <NavItem onClick={logout}>
+        <NavLink>LOG OUT</NavLink>
+        </NavItem>
   }
   }
   return (
-    <nav>
+    <div style={{zIndex: 100}}>
+        <Navbar color="transparent" dark expand="md">
+        <BootstrapNav className="mr-auto" navbar>
         {loginOrLogout()}
-        <Link to='/about'>
-        <p id="button-about" href="#">ABOUT</p>
+        <NavItem>
+              <NavLink href="/about">ABOUT</NavLink>
+        </NavItem>
+        <NavItem>
+              <NavLink href="/contact">CONTACT</NavLink>
+        </NavItem>
+        <NavItem>
+              <NavLink href="/terms-and-conditions">TERMS &amp; CONDITIONS</NavLink>
+        </NavItem>
+        {/*<Link to='/about'>
+        <p className="nav-item" id="button-about" href="#">ABOUT</p>
         </Link>
         <Link to='/contact'>
-        <p id="button-contact" href="#">CONTACT</p>
+        <p className="nav-item" id="button-contact" href="#">CONTACT</p>
         </Link>
-    </nav>
+        <Link to='/terms-and-conditions'>
+        <p className="nav-item" id="button-terms-and-conditions" href="#">TERMS &amp; CONDITIONS</p>
+        </Link>*/}
+        </BootstrapNav>
+        </Navbar>
+    </div>
   );
 }
 
