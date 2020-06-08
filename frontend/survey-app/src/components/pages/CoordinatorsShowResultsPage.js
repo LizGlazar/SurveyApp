@@ -4,13 +4,13 @@ import history from '../../history';
 import Ellipse from '../ellipseComponent/ellipse';
 import Chart from '../chartComponent/chart';
 
-function CoordinatorsShowResultsPage() {
+function CoordinatorsShowResultsPage(props) {
 
   const initialChartData = {
     labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
     datasets:[
       {
-        label:'Population',
+        label:'Number of Respondents',
         data:[
           617594,
           181045,
@@ -31,55 +31,92 @@ function CoordinatorsShowResultsPage() {
       }
     ]
   }
+  function getAnswerTexts(question) {
+    return question.answers.map((answer, index) => {
+      return answer.answerText;
+    });
+  }
 
-  const [chartData, setChartData] = useState(initialChartData);
+  function getAnswerData(question) {
+    return question.answers.map((answer, index) => {
+      return answer.numberOfRespondents;
+    }
+    )
+  }
 
-  return (
-    <div className="create-survey-page-container">
-      <form>
-            <div className="input-group-create-survey-page">
+  function buildChartData(question) {
+    let chartData = Object.assign({}, initialChartData);
+    chartData.labels = getAnswerTexts(question);
+    console.log(chartData.labels);
+    chartData.datasets[0].data = getAnswerData(question); 
+    return chartData;
+  }
+
+
+  const [surveyResults, setSurveyResults] = useState();
+
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const id = props.match.params.id;
+
+    fetch('http://localhost:8080/surveys/' + id + "/results", {
+        credentials: 'include'
+      })
+        .then(res => res.json())
+        .then(
+        (result) => {
+            console.log(result);
             
-              <label>Survey Name:</label>
-              <input
-                type="text"
-                className="input-create-survey-page-name"
-                
-                />
-                </div>
+            setSurveyResults(result);
+            setIsLoaded(true);
+        },
+        (error) => {
+            console.log(error);
+            setIsLoaded(true);
+        }
+    )
+  }, []) 
+
+ 
+    if (isLoaded) {
+      return (
+      <div className="create-survey-page-container">
+        <form>
               <div className="input-group-create-survey-page">
-              <label>Question:</label>
-              <input
-                type="text"
-                className="input-create-survey-page-question"
-                
-                />
-                </div>
+              
+                <label>Survey Name:</label>
+                <input
+                  type="text"
+                  className="input-create-survey-page-name"
+                  value={surveyResults.name}
+                  disabled
+                  />
+                  </div>
 
-              <div className="input-group-create-survey-page">
-              <label>Answers:</label>
-              <div> <ol type="A">
-              <li><input
-                type="text"
-                className="input-show-results-page-answers"
-                
-                /></li>
-                </ol>
-                </div>
-              </div>
+                {/*chart implementation
+                <div class="chart-container">
+                  <canvas id="survey-results-chart" width="800" height="450"></canvas>  
+                </div>*/}
 
-              {/*chart implementation
-              <div class="chart-container">
-                <canvas id="survey-results-chart" width="800" height="450"></canvas>  
-              </div>*/}
-
-           
-            
-      
-      </form>
-      <Chart chartData={chartData} location="Massachusetts" legendPosition="bottom"/>
-      <Ellipse />
-    </div>
-  );
+        </form>
+        {surveyResults.questions.map((question, index) => {
+          return <Chart chartData={buildChartData(question)} questionText={question.questionText} legendPosition="bottom"/>
+        }
+        )
+        }
+        
+        <Ellipse />
+      </div>
+    
+      );
+    } else {
+        return (
+          <div className="create-survey-page-container">
+            <p>Loading...</p>
+          </div>
+        )
+      } 
 }
 
 export default CoordinatorsShowResultsPage;

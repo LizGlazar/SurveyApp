@@ -131,68 +131,45 @@ export default Chart; */
 
 
 import React, {Component} from 'react';
-import {Bar, Line, Pie} from 'react-chartjs-2';
+import {HorizontalBar} from 'react-chartjs-2';
 
 class Chart extends Component{
   constructor(props){
     super(props);
     this.state = {
-      chartData:props.chartData
+      chartData: props.chartData,
+      questionText: props.questionText
     }
   }
 
   static defaultProps = {
     displayTitle:true,
     displayLegend: true,
-    legendPosition:'right',
-    location:'City'
+    legendPosition:'right'
   }
 
   render(){
     return (
       <div className="chart">
-        <Bar
+        <HorizontalBar
           data={this.state.chartData}
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'Largest Cities In '+this.props.location,
+              text: this.state.questionText,
               fontSize:25
             },
             legend:{
               display:this.props.displayLegend,
               position:this.props.legendPosition
-            }
-          }}
-        />
-
-        <Line
-          data={this.state.chartData}
-          options={{
-            title:{
-              display:this.props.displayTitle,
-              text:'Largest Cities In '+this.props.location,
-              fontSize:25
             },
-            legend:{
-              display:this.props.displayLegend,
-              position:this.props.legendPosition
-            }
-          }}
-        />
-
-        <Pie
-          data={this.state.chartData}
-          options={{
-            title:{
-              display:this.props.displayTitle,
-              text:'Largest Cities In '+this.props.location,
-              fontSize:25
-            },
-            legend:{
-              display:this.props.displayLegend,
-              position:this.props.legendPosition
-            }
+            scales: {
+                  xAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
           }}
         />
       </div>

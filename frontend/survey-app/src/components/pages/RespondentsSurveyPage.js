@@ -72,6 +72,9 @@ class RespondentsSurveyPage extends React.Component {
 
   render(){
     return (
+  
+      
+
       <div className="create-survey-page-container">
         <form>
               <div className="input-group-create-survey-page">
@@ -120,6 +123,7 @@ class RespondentsSurveyPage extends React.Component {
         </form>
       <Ellipse />
     </div>
+    
     );
   }
 }
