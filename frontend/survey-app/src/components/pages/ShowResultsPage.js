@@ -4,33 +4,25 @@ import history from '../../history';
 import Ellipse from '../ellipseComponent/ellipse';
 import Chart from '../chartComponent/chart';
 
-function CoordinatorsShowResultsPage(props) {
+function ShowResultsPage(props) {
 
-  const initialChartData = {
-    labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
-    datasets:[
-      {
-        label:'Number of Respondents',
-        data:[
-          617594,
-          181045,
-          153060,
-          106519,
-          105162,
-          95072
-        ],
-        backgroundColor:[
-          'rgba(255, 99, 132, 0.6)',
-          'rgba(54, 162, 235, 0.6)',
-          'rgba(255, 206, 86, 0.6)',
-          'rgba(75, 192, 192, 0.6)',
-          'rgba(153, 102, 255, 0.6)',
-          'rgba(255, 159, 64, 0.6)',
-          'rgba(255, 99, 132, 0.6)'
-        ]
-      }
-    ]
+  function getBackgroundColors(numberOfAnswers) {
+    let colors = [];
+    for (let i = 0; i < numberOfAnswers; i++) {
+      colors.push(backgroundColors[i % backgroundColors.length]);
+    }
+    return colors;
   }
+
+  const backgroundColors = [
+    'rgba(255, 99, 132, 0.6)',
+    'rgba(54, 162, 235, 0.6)',
+    'rgba(255, 206, 86, 0.6)',
+    'rgba(75, 192, 192, 0.6)',
+    'rgba(153, 102, 255, 0.6)',
+    'rgba(255, 159, 64, 0.6)',
+    'rgba(255, 99, 132, 0.6)']
+
   function getAnswerTexts(question) {
     return question.answers.map((answer, index) => {
       return answer.answerText;
@@ -45,10 +37,16 @@ function CoordinatorsShowResultsPage(props) {
   }
 
   function buildChartData(question) {
-    let chartData = Object.assign({}, initialChartData);
-    chartData.labels = getAnswerTexts(question);
-    console.log(chartData.labels);
-    chartData.datasets[0].data = getAnswerData(question); 
+    let chartData = {
+      labels: getAnswerTexts(question),
+      datasets:[
+        {
+          label:'Number of Respondents',
+          data: getAnswerData(question),
+          backgroundColor: getBackgroundColors(question.answers.length)
+        }
+      ]
+    };
     return chartData;
   }
 
@@ -119,4 +117,4 @@ function CoordinatorsShowResultsPage(props) {
       } 
 }
 
-export default CoordinatorsShowResultsPage;
+export default ShowResultsPage;
