@@ -790,5 +790,12 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           padding-top: 2%;
         }
         
+        .canvas-container { 
+          width: 800px;
+        }
+        
+        canvas {
+          width: 800px;
+        }
       
         

@@ -24,10 +24,9 @@ import history from './history';
 import CoordinatorsSurveyList from './components/pages/CoordinatorsSurveyList';
 import CoordinatorsEditSurveyPage from './components/pages/CoordinatorsEditSurveyPage';
 import CoordinatorsCreateSurveyPage from './components/pages/CoordinatorsCreateSurveyPage';
-import CoordinatorsShowResultsPage from './components/pages/CoordinatorsShowResultsPage';
+import ShowResultsPage from './components/pages/ShowResultsPage';
 import RespondentsSurveyListPage from './components/pages/RespondentsSurveyListPage';
 import RespondentsSurveyPage from './components/pages/RespondentsSurveyPage';
-import RespondentsSurveyResultsPage from './components/pages/RespondentsSurveyResultsPage';
 import TermsAndConditions from './components/pages/Terms&Conditions';
 
 
@@ -113,10 +112,10 @@ function App() {
         <Route path="/coordinators-survey-list" component={CoordinatorsSurveyList} />
         <Route path="/coordinators-edit-survey-page/:id" component={CoordinatorsEditSurveyPage} />
         <Route path='/coordinators-create-survey-page' component={CoordinatorsCreateSurveyPage} />
-        <Route path='/coordinators-show-results-page/:id' component={CoordinatorsShowResultsPage} />
+        <Route path='/coordinators-show-results-page/:id' component={ShowResultsPage} />
         <Route path='/respondents-survey-list-page' component={RespondentsSurveyListPage} />
         <Route path='/respondents-survey-page/:id' component={RespondentsSurveyPage} />
-        <Route path='/respondents-survey-results-page/:id' component={RespondentsSurveyResultsPage} />
+        <Route path='/respondents-survey-results-page/:id' component={ShowResultsPage} />
         <Ellipse />
         </Switch> 
       </div> 
