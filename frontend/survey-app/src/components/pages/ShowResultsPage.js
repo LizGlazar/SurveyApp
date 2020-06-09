@@ -99,7 +99,11 @@ function ShowResultsPage(props) {
 
         </form>
         {surveyResults.questions.map((question, index) => {
-          return <Chart chartData={buildChartData(question)} questionText={question.questionText} legendPosition="bottom"/>
+          return (
+            <div className = "canvas-container">
+              <Chart chartData={buildChartData(question)} questionText={question.questionText} legendPosition="bottom"/>
+            </div>
+          )
         }
         )
         }
