@@ -11,7 +11,7 @@ function TermsAndConditions() {
       {/*<Nav />*/}
       <Ellipse />
 
-      <div className="contact-page-container">
+      <div className="terms-and-conditions-container">
         
       <h2> 
         <strong>Terms and Conditions</strong>

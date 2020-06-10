@@ -36,7 +36,7 @@ function Nav() {
 
   function loginOrLogout() {
     if (!isUserLoggedIn()) {
-      return <div Style="display: flex">
+      return <div style={{display: "flex"}}>
          <NavItem>
               <NavLink href="/login">LOGIN</NavLink>
         </NavItem>
