@@ -79,8 +79,9 @@ function ShowResultsPage(props) {
  
     if (isLoaded) {
       return (
+        <div className="parent-container">  
       <div className="create-survey-page-container">
-        <form>
+
               <div className="input-group-create-survey-page">
               
                 <label>Survey Name:</label>
@@ -97,7 +98,6 @@ function ShowResultsPage(props) {
                   <canvas id="survey-results-chart" width="800" height="450"></canvas>  
                 </div>*/}
 
-        </form>
         {surveyResults.questions.map((question, index) => {
           return (
             <div className = "canvas-container">
@@ -110,12 +110,14 @@ function ShowResultsPage(props) {
         
         <Ellipse />
       </div>
-    
+        </div>
       );
     } else {
         return (
-          <div className="create-survey-page-container">
+          <div className="parent-container">
+            <div className="create-survey-page-container">
             <p>Loading...</p>
+          </div>
           </div>
         )
       } 

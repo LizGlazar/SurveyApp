@@ -97,10 +97,13 @@ function App() {
   </div>*/
   return (
     <Router history={history}>
-      <div id="landing-page-background">
-      <div className="root-container">
       
-        <Nav />
+      <div id="landing-page-background">
+        
+      <div className="root-container">
+      <Nav />
+      
+        
         <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/about" component={About} />

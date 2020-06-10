@@ -353,11 +353,13 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         width: 100%;
         color: white;
         background-color: #202027;
+        z-index: 30;
       }
       
       #surveys td, #surveys th {
         border: 1px solid #606168;
         padding: 8px;
+        z-index: 30;
       }
       
       #surveys tr:hover {background-color: #606168;}
@@ -368,6 +370,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         text-align: center;
         background-color: #1a1a1f;
         color: white;
+        z-index: 30;
       }
 
       .button-edit {
@@ -756,9 +759,12 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           margin-left: auto;
           padding-left: 15px;
           padding-right: 15px;
-         
+
+          display: flex;
           justify-content: space-around;
-          margin-top: 16%;
+          text-align: center;
+
+          margin-top: 20%;
           height: 100%;
           color: white;
           font-family: Poppins;
@@ -769,9 +775,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           margin-right: 10%;
         }
 
-        #contact-item{
-          text-align: center;
-        } 
+    
 
         /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         NAVBAR
@@ -789,7 +793,30 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         h3 {
           padding-top: 2%;
         }
+
+        .terms-and-conditions-container {
+          margin-right: auto;
+          margin-left: auto;
+          padding-left: 15px;
+          padding-right: 15px;
+
+          justify-content: space-around;
+          
+
+          margin-top: 20%;
+          height: 100%;
+          color: white;
+          font-family: Poppins;
+          font-weight: bold;
+          font-size: 24px;
+
+          margin-left: 10%;
+          margin-right: 10%;
+        }
         
+        /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        SHOW RESULTS PAGE
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
         .canvas-container { 
           width: 800px;
         }
@@ -797,5 +824,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         canvas {
           width: 800px;
         }
+
+
       
         
