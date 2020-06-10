@@ -213,7 +213,7 @@ class CoordinatorsEditSurveyPage extends React.Component {
                   <Button id="button-cancel" variant="btn btn-success" onClick={() => { if (window.confirm('Are you sure you wish to cancel editing?')) history.push('/coordinators-survey-list')}}>CANCEL</Button>
                 </div>
         </form>
-      <Ellipse />
+
     </div>
     );
   }

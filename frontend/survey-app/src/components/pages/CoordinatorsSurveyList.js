@@ -16,7 +16,7 @@ function CoordinatorsSurveyList() {
 <p></p>
       <CoordinatorsTable />
 
-      <Ellipse />
+      
     </div>
   );
 }

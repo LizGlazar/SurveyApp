@@ -40,7 +40,7 @@ width: 342px;
 height: 342px;
 left: 138px;
 top: 626px;
-z-index: 0;
+z-index: -1;
 }
 
 /* Ellipse 5 */
@@ -50,7 +50,7 @@ width: 342px;
 height: 342px;
 left: 174px;
 top: 616px;
-z-index: 0;
+z-index: -1;
 }
 
 /* Ellipse 2 */
@@ -60,7 +60,7 @@ width: 240px;
 height: 240px;
 left: 588px;
 top: 146px;
-z-index: 0;
+z-index: -1;
 }
 
 /* Ellipse 6 */
@@ -70,7 +70,7 @@ width: 240px;
 height: 240px;
 left: 608px;
 top: 146px;
-z-index: 0;
+z-index: -1;
 }
 
 /* Ellipse 3 */
@@ -81,7 +81,7 @@ width: 497px;
 height: 497px;
 left: 1500px;
 top: 661px;
-z-index: 0;
+z-index: -1;
 }
 
 /* Ellipse 4 */
@@ -91,7 +91,7 @@ width: 497px;
 height: 497px;
 left: 1440px;
 top: 661px;
-z-index: 0;
+z-index: -1;
 }
 
 /* Get The Feedback You Need */
@@ -343,6 +343,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         line-height: 26px;
         color: #FFFFFF;
         padding-right: 20px;
+        z-index: 30;
       }
       
       #surveys {
@@ -352,8 +353,8 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         border: 3px solid #606168;
         width: 100%;
         color: white;
-        background-color: #202027;
-        z-index: 30;
+        background-color: rgba(32, 32, 39, 0.6);
+        z-index: 30 !important;
       }
       
       #surveys td, #surveys th {
@@ -368,7 +369,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         padding-top: 30px;
         padding-bottom: 30px;
         text-align: center;
-        background-color: #1a1a1f;
+        background-color: rgba(26, 26, 31, 0.6);
         color: white;
         z-index: 30;
       }
@@ -408,6 +409,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           td {
             height: 64px;
             width: 225px;
+            z-index: 30;
           }
         /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         CREATE SURVEY PAGE
@@ -493,17 +495,14 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         #button-area-line {
           margin: 10px auto;
           margin-left: 25px;
-          display: -webkit-box;   
-          display: -moz-box;  
-          display: -ms-flexbox; 
-          display: -webkit-flex; 
+          width: 50%;
+      
           display: flex;
           -webkit-flex-direction: row;
           -moz-flex-direction: row;
           flex-direction: row;
           justify-content: space-around;
           flex-wrap: nowrap;
-          max-width:35%;
         }
 
         #button-add-question{
@@ -825,6 +824,3 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           width: 800px;
         }
 
-
-      
-        

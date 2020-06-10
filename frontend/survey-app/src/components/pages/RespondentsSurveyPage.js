@@ -121,7 +121,7 @@ class RespondentsSurveyPage extends React.Component {
                 </div>
 
         </form>
-      <Ellipse />
+      
     </div>
     
     );

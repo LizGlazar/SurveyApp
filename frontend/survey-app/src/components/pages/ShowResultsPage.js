@@ -108,7 +108,7 @@ function ShowResultsPage(props) {
         )
         }
         
-        <Ellipse />
+       
       </div>
         </div>
       );

@@ -119,8 +119,9 @@ function App() {
         <Route path='/respondents-survey-list-page' component={RespondentsSurveyListPage} />
         <Route path='/respondents-survey-page/:id' component={RespondentsSurveyPage} />
         <Route path='/respondents-survey-results-page/:id' component={ShowResultsPage} />
-        <Ellipse />
+        
         </Switch> 
+        <Ellipse />
       </div> 
       </div>
       
