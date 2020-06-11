@@ -6,6 +6,8 @@ html {
   -o-background-size: cover;
   background-size: cover;
   
+ 
+  
 }
 
 html::-webkit-scrollbar{
@@ -22,14 +24,16 @@ html::-webkit-scrollbar{
 #landing-page-background {
 position: absolute;
 
+
 width: 100%;
-height: 100%;
+height: device-height;
 left: 0px;
 top: 0px;
 
 
 background: #2F303A;
 z-index: -10;
+
 
 }
 
