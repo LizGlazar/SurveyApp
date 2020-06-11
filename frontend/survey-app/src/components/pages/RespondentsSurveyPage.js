@@ -1,8 +1,6 @@
 import React from 'react';
-import { Button } from 'reactstrap'; // { { Button, Table}
+import { Button } from 'reactstrap';
 import history from '../../history';
-import Ellipse from '../ellipseComponent/ellipse';
-import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { queryByTestId } from '@testing-library/react';
 

@@ -2,11 +2,6 @@ import React from 'react';
 import history from '../../history';
 
 class LoginBox extends React.Component {
-
-    /*constructor(props) {
-      super(props);
-      this.state = {};
-    }*/
     state = {
       isCoordinator: true
     }
@@ -65,13 +60,8 @@ class LoginBox extends React.Component {
     render() {
       return (
         <div className = "parent-container">
-{/*}       <div className="box-controller">
-          <div className="controller selected-controller">*/}
               <div className="box-container">
         <div className="inner-container">
-          {/*<div className="header">
-            Login
-          </div>*/}
           <form onSubmit={this.handleSubmit}>
           <div className="box">
   
@@ -105,8 +95,6 @@ class LoginBox extends React.Component {
           </form>
         </div>
         </div>
-        {/*</div>
-        </div>*/}
         </div>
       );
     }

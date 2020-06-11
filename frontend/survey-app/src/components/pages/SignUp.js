@@ -1,6 +1,4 @@
 import React from 'react';
-//import './Assets/css/surveyapp.css';
-import Nav from '../../Nav.js';
 import Ellipse from '../ellipseComponent/ellipse';
 import SignUpBox from '../signUpBoxComponent/signUpBox';
 
@@ -9,7 +7,6 @@ function SignUp() {
       <div className="parent-container">
       <div id="landing-page-background">
         <p id="landing-page-logo">SurveyApp</p>
-        {/*<Nav />*/}
         <Ellipse />
         <div className="child1LoginPageLoginBox"><SignUpBox /></div>
         

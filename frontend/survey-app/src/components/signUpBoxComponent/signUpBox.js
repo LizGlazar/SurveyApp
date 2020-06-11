@@ -2,11 +2,6 @@ import React from 'react';
 import history from '../../history';
 
 class SignUpBox extends React.Component {
-
-    /*constructor(props) {
-      super(props);
-      this.state = {};
-    }*/
     state = {
       isCoordinator: true
     }
@@ -73,15 +68,9 @@ class SignUpBox extends React.Component {
       return (
         
         <div className = "parent-container">
-{/*}       <div className="box-controller">
-          <div className="controller selected-controller">*/}
-          
               <div className="box-container">
               
         <div className="inner-container">
-          {/*<div className="header">
-            Login
-          </div>*/}
           <form onSubmit={this.handleSubmit}>
           <div className="box">
 
@@ -132,7 +121,7 @@ class SignUpBox extends React.Component {
                             checked={this.state.isCoordinator}
                             onChange={e => this.onValueChange(true)}
                             />
-            <label for="coordinator">I'm a Coordinator</label>
+            <label for="coordinator">&nbsp; I'm a Coordinator</label>
             </div>
             <div>
             <input 
@@ -140,7 +129,7 @@ class SignUpBox extends React.Component {
                             checked={!this.state.isCoordinator}
                             onChange={e => this.onValueChange(false)}
                             />
-            <label for="respondent">I'm a Respondent</label>
+            <label for="respondent">&nbsp; I'm a Respondent</label>
             </div>
             </div>
             </div>
@@ -152,10 +141,7 @@ class SignUpBox extends React.Component {
           </form>
         </div>
         
-        </div>
-        {/*</div>
-        </div>*/}
-        
+        </div>     
         </div>
         
       );

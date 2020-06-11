@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'reactstrap'; // { { Button, Table}
-import history from '../../history';
-import Ellipse from '../ellipseComponent/ellipse';
 import Chart from '../chartComponent/chart';
 
 function ShowResultsPage(props) {
@@ -93,11 +90,6 @@ function ShowResultsPage(props) {
                   />
                   </div>
 
-                {/*chart implementation
-                <div class="chart-container">
-                  <canvas id="survey-results-chart" width="800" height="450"></canvas>  
-                </div>*/}
-
         {surveyResults.questions.map((question, index) => {
           return (
             <div className = "canvas-container">
@@ -107,8 +99,6 @@ function ShowResultsPage(props) {
         }
         )
         }
-        
-       
       </div>
         </div>
       );

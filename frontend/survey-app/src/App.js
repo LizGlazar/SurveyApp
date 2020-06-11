@@ -1,19 +1,10 @@
 import React from 'react';
-
-//components
-//import Header from './components/headerComponent/header';
-//import Ellipse from './components/ellipseComponent/ellipse';
-//import Homepage from './components/pages/homePage';
-
-//includes
-//import './Assets/css/default.min.css';
 import './Assets/css/surveyapp.css';
 import './Assets/css/loginAndSignUpSty.css';
 import Ellipse from './components/ellipseComponent/ellipse';
 import Nav from './Nav';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
-//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Router, Switch, Route } from "react-router-dom";
 import LandingPage from './components/pages/LandingPage';
 import LogIn from './components/pages/LogIn';
@@ -31,70 +22,6 @@ import TermsAndConditions from './components/pages/Terms&Conditions';
 
 
 function App() {
-  /*constructor(){
-    super();
-    this.state = {
-      chartData:{}
-    }
-  }
-  //lifecycle hook (deprecated)
-  componentWillMount(){
-    this.getChartData();
-  }
-
-  getChartData(){
-    // Ajax calls here (fill the state with the data that comes in)
-    this.setState({
-      chartData:{
-        labels: ['A answers', 'B answers', 'C Answers', 'Other answers'], 
-        datasets:[
-          {
-            label: 'Number of respondents',
-            data: [
-              1,
-              2,s
-              3,
-              4
-            ],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.6)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(255, 206, 86, 0.6)',
-              'rgba(75, 192, 192, 0.6)'
-            ]
-          }
-        ]
-      }
-    });
-  } */
-  
-  /*constructor(props) {
-    super(props);
-    this.state = {
-      isLoginOpen: true,
-      isRegisterOpen: false
-    }
-
-    <div className="box-controller">
-    <div
-      className={"controller " + (this.state.isLoginOpen
-      ? "selected-controller"
-      : "")}
-      onClick={this
-      .showLoginBox
-      .bind(this)}>
-      Login
-    </div>
-    <div
-      className={"controller " + (this.state.isRegisterOpen
-      ? "selected-controller"
-      : "")}
-      onClick={this
-      .showRegisterBox
-      .bind(this)}>
-      Register
-    </div>
-  </div>*/
   return (
     <Router history={history}>
       
@@ -127,8 +54,6 @@ function App() {
       
     </Router>
   );
-    //<div className="box-container">
-    //</div>
 }
 
 export default App;

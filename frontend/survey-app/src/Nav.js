@@ -1,6 +1,5 @@
 import React from 'react';
 import './Assets/css/surveyapp.css';
-import { Link } from 'react-router-dom';
 import history from './history';
 import { Button,
   Navbar,
@@ -43,12 +42,6 @@ function Nav() {
         <NavItem>
               <NavLink href="/signup">SIGN UP</NavLink>
         </NavItem>
-      {/*<Link to='/login'>
-      <p className="nav-item" id="button-login" href="#">LOG IN</p>
-      </Link>
-      <Link to='/signup'>
-      <p className="nav-item" id="button-sign-up" href="#">SIGN UP</p>
-    </Link>*/}
       </div>
       } else {
         return <NavItem onClick={logout}>
@@ -70,15 +63,6 @@ function Nav() {
         <NavItem>
               <NavLink href="/terms-and-conditions">TERMS &amp; CONDITIONS</NavLink>
         </NavItem>
-        {/*<Link to='/about'>
-        <p className="nav-item" id="button-about" href="#">ABOUT</p>
-        </Link>
-        <Link to='/contact'>
-        <p className="nav-item" id="button-contact" href="#">CONTACT</p>
-        </Link>
-        <Link to='/terms-and-conditions'>
-        <p className="nav-item" id="button-terms-and-conditions" href="#">TERMS &amp; CONDITIONS</p>
-        </Link>*/}
         </BootstrapNav>
         </Navbar>
     </div>

@@ -2,12 +2,6 @@ import React from 'react';
 import history from '../../history';
 
 class LogOutBox extends React.Component {
-
-    /*constructor(props) {
-      super(props);
-      this.state = {};
-    }*/
-    
     handleSubmit = e => {
       console.log('handleSubmit() Submit form with state:', this.state);
       e.preventDefault();
@@ -48,13 +42,8 @@ class LogOutBox extends React.Component {
     render() {
       return (
         <div className = "parent-container">
-{/*}       <div className="box-controller">
-          <div className="controller selected-controller">*/}
               <div className="box-container">
         <div className="inner-container">
-          {/*<div className="header">
-            Login
-          </div>*/}
           <form onSubmit={this.handleSubmit}>
           <div className="box">
             <button className="login-btn">Logout</button>
@@ -62,8 +51,6 @@ class LogOutBox extends React.Component {
           </form>
         </div>
         </div>
-        {/*</div>
-        </div>*/}
         </div>
       );
     }

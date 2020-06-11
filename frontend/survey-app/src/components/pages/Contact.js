@@ -1,13 +1,10 @@
 import React, {useState, useEffect} from 'react';
-//import './Assets/css/surveyapp.css';
-import Nav from '../../Nav.js';
 import Ellipse from '../ellipseComponent/ellipse';
 function Contact() {
   return (
     <div className="parent-container">
     <div id="landing-page-background">
     <p id="landing-page-logo">SurveyApp</p>
-      {/*<Nav />*/}
       <Ellipse />
 
       <div className="contact-page-container">

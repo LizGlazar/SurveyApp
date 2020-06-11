@@ -3,17 +3,7 @@ import { Button } from 'reactstrap';
 import history from '../../history';
 
 function CoordinatorsTable() {
-   /*constructor(props) {
-      super(props);
-      /////
-      /*this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);*/
-      /////      */
-    const [surveys, setSurveys] = useState([
-        /*{ id: 1, surveyName: 'Customer Satisfaction', numberOfRespondents: 21, startDate: '10 May 2020', endDate: '10 May 2020'},
-        { id: 2, surveyName: 'Customer Trust', numberOfRespondents: 19, startDate: '05 October 2020', endDate: '05 October 2020'},
-        { id: 3, surveyName: 'Customer Attitudes', numberOfRespondents: 16, startDate: '25 December 2020', endDate: '25 December 2020'},*/
-    ]);
+    const [surveys, setSurveys] = useState([]);
 
     const [headers, setHeaders] = useState ({id: 'ID', surveyName: 'Survey Name', numberOfRespondents: 'Number of Respondents', startDate: 'Start Date', endDate: 'End Date', action: 'Action'});
 
@@ -24,7 +14,7 @@ function CoordinatorsTable() {
     useEffect(() => {
         fetch('http://localhost:8080/surveys', {
             credentials: 'include'
-          })
+            })
             .then(res => res.json())
             .then(
             (result) => {
@@ -39,16 +29,6 @@ function CoordinatorsTable() {
             }
         )
     }, []) 
-
-    /* this.setState({ //state is by default an object
-         surveys: [
-            { id: 1, surveyName: 'Customer Satisfaction', numberOfRespondents: 21, startDate: '10 May 2020', endDate: '10 May 2020'},
-            { id: 2, surveyName: 'Customer Trust', numberOfRespondents: 19, startDate: '05 October 2020', endDate: '05 October 2020'},
-            { id: 3, surveyName: 'Customer Attitudes', numberOfRespondents: 16, startDate: '25 December 2020', endDate: '25 December 2020'},
-         ],
-
-         headers: {id: 'ID', surveyName: 'Survey Name', numberOfRespondents: 'Number of Respondents', startDate: 'Start Date', endDate: 'End Date', action: 'Action'}
-      });*/
     
     function deleteSurvey(id) {
         fetch('http://localhost:8080/surveys/' + id, {
@@ -85,35 +65,6 @@ function CoordinatorsTable() {
             )
         })
     }
-    
-    /////
-    /*https://stackoverflow.com/questions/40415846/remove-a-specific-table-row-on-onclick-event-in-react-component
-    https://www.pluralsight.com/guides/removing-items-react
-    */
-
-    ///
-    /*handleChange(e) {
-        this.setState({text: e.target.value});
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-        var newItem = {
-            text: this.props.w +''+this.props.t,
-            id: Date.now()
-        };
-        this.setState((prevState) => ({
-            items: prevState.items.concat(newItem),
-            text: ''
-        }));
-    }
-
-    delete(id){          // How does the function know the ID of an item that needs to be deleted and how does it delete the item?
-        this.setState(this.item.id)
-    }
-
-/////*/
-
     function renderTableHeader() {
         let header = Object.keys(headers);
         return header.map((columnName, index) => {

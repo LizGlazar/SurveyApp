@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'reactstrap'; // { { Button, Table}
+import { Button } from 'reactstrap';
 import history from '../../history';
 import Ellipse from '../ellipseComponent/ellipse';
 import DatePicker from 'react-datepicker';
@@ -147,9 +147,9 @@ class CoordinatorsCreateSurveyPage extends React.Component {
               </div>
             </div>
               {this.state.survey.questions.map((item, questionIndex) => (
-                <div className="input-group-create-survey-page"> {/*gdy ten div był nad this.state  nie wyglądało to dobrze, probelm był z linią pytania*/}
+                <div className="input-group-create-survey-page"> 
                   <label>Question:</label>
-                  <p></p> {/*maybe this can be improved*/}
+                  <p></p>
                   <div className="button-trash-can-input-line">
                     <Button className="button-trash-can-delete-question" color="none" variant="btn btn-success" onClick={() => this.removeQuestion(questionIndex)}></Button>
                     <input
@@ -159,7 +159,7 @@ class CoordinatorsCreateSurveyPage extends React.Component {
                       onChange={questionText => this.setQuestionText(questionText.target.value, questionIndex)}
                     />
                   </div>
-                  <p></p> {/*maybe this can be improved*/}
+                  <p></p>
                   <label>Answers:</label>
                   {item.answers.map((answer, answerIndex) => (
                     <div className="input-group-create-survey-page">

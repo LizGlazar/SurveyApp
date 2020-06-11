@@ -1,6 +1,4 @@
 import React from 'react';
-//import './Assets/css/surveyapp.css';
-import Nav from '../../Nav.js';
 import Ellipse from '../ellipseComponent/ellipse';
 function About() {
   return (
@@ -8,7 +6,6 @@ function About() {
 
     <div id="landing-page-background">
       <p id="landing-page-logo">SurveyApp</p>
-      {/*<Nav />*/}
       <Ellipse />
       <div className="about-section">
       

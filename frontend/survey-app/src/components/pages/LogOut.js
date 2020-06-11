@@ -1,17 +1,12 @@
 import React from 'react';
-//import './Assets/css/surveyapp.css';
-import Nav from '../../Nav.js';
 import Ellipse from '../ellipseComponent/ellipse';
 import LogOutBox from '../logOutBoxComponent/logOutBox';
 
 function LogOut() {
   return (
-
-    /*czyszczenie localstorage i wysyłanie do backendu logout*/
     <div className="parent-container">
     <div id="landing-page-background">
       <p id="landing-page-logo">SurveyApp</p>
-      {/*<Nav />*/}
       <Ellipse />
       <div className="child1LoginPageLoginBox"><LogOutBox /></div>
       
