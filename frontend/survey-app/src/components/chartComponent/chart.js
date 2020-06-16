@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {HorizontalBar} from 'react-chartjs-2';
+import { withRouter } from 'react-router-dom';
 
 class Chart extends Component{
   constructor(props){
@@ -25,11 +26,15 @@ class Chart extends Component{
             title:{
               display:this.props.displayTitle,
               text: this.state.questionText,
-              fontSize:25
+              fontSize:25,
+              fontColor: 'white'
             },
             legend:{
               display:this.props.displayLegend,
-              position:this.props.legendPosition
+              position:this.props.legendPosition,
+              labels: {
+                fontColor: 'white'
+              }
             },
             scales: {
                   xAxes: [{
