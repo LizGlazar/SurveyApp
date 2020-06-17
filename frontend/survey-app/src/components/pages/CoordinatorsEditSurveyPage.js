@@ -68,10 +68,10 @@ class CoordinatorsEditSurveyPage extends React.Component {
     let questionIndex = newState.survey.questions.length;
     let newQuestion = {
       number: questionIndex,
-      questionText: "test question",
+      questionText: "",
       answers: [{
         number: 0,
-        answerText: "test answer"
+        answerText: ""
       }]
     };
     newState.survey.questions.push(newQuestion);
